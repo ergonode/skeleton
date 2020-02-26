@@ -1,0 +1,45 @@
+security:
+    access_decision_manager:
+        strategy: 'unanimous'
+        allow_if_all_abstain: false
+
+    providers:
+        domain_user_provider:
+            id: 'Ergonode\Authentication\Application\Security\Provider\DomainUserProvider'
+
+    encoders:
+        Ergonode\Account\Domain\Entity\User:
+            algorithm: 'sha1'
+
+    firewalls:
+        dev:
+            pattern: '^/(_(profiler|wdt)|css|images|js)/'
+            security: false
+        doc:
+            pattern: '^/$|^/api/doc'
+            security: false
+        login:
+            pattern:  '^/api/v1/login$'
+            stateless: true
+            user_checker: 'Ergonode\Account\Application\Security\Checker\UserActivityChecker'
+            guard:
+                provider: 'domain_user_provider'
+                authenticators:
+                    - 'Ergonode\Authentication\Application\Security\Authenticator\FormAuthenticator'
+        api:
+            pattern: '^/api'
+            stateless: true
+            security: true
+            guard:
+                provider: 'domain_user_provider'
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+        base:
+            pattern: '^/'
+            security: true
+            anonymous: ~
+            entry_point: ~
+
+    access_control:
+        - { path: '^/api/v1/login', roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: '^/api', roles: IS_AUTHENTICATED_FULLY }

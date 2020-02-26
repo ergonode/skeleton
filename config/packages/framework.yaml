@@ -1,0 +1,8 @@
+framework:
+    secret: '%env(APP_SECRET)%'
+    csrf_protection: false
+    default_locale: 'en'
+    translator:
+        fallback: ['en']
+    php_errors:
+        log: true

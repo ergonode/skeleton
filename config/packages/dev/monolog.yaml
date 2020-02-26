@@ -1,0 +1,19 @@
+monolog:
+    channels: ['import']
+    handlers:
+        import:
+            # log all messages (since debug is the lowest level)
+            level: debug
+            type: stream
+            path: '%kernel.logs_dir%/import.log'
+            channels: import
+        main:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+            channels: ["!event"]
+        console:
+            type: console
+            level: debug
+            process_psr_3_messages: false
+            channels: ["!event", "!doctrine"]
