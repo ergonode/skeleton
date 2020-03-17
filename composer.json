@@ -60,20 +60,6 @@
             "App\\Tests\\": "tests/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-workflow.git"
-        },
-        {
-            "type": "vcs",
-            "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-segment.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:ergonode/notification.git"
-        }
-    ],
     "replace": {
         "paragonie/random_compat": "2.*",
         "symfony/polyfill-ctype": "*",
