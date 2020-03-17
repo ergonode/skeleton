@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a38559f5e5b503b390dffc32b0edd65",
+    "content-hash": "f746ed7f178f49ceded139fe2da9d001",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2114,20 +2114,12 @@
                     "Ergonode\\Notification\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Ergonode\\Notification\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Notification",
             "homepage": "https://ergonode.com",
-            "support": {
-                "source": "https://github.com/ergonode/notification/tree/0.6.0",
-                "issues": "https://github.com/ergonode/notification/issues"
-            },
             "time": "2020-01-16T12:21:41+00:00"
         },
         {
@@ -2267,11 +2259,17 @@
         },
         {
             "name": "ergonode/segment",
-            "version": "0.6.1.1",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
-                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-segment.git",
+                "url": "https://github.com/ergonode/segment.git",
                 "reference": "276e20855671493d388fdc8aa5302c704e98fc26"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ergonode/segment/zipball/276e20855671493d388fdc8aa5302c704e98fc26",
+                "reference": "276e20855671493d388fdc8aa5302c704e98fc26",
+                "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.9",
@@ -2301,11 +2299,7 @@
                     "Ergonode\\Segment\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Ergonode\\Segment\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
@@ -2444,11 +2438,17 @@
         },
         {
             "name": "ergonode/workflow",
-            "version": "0.6.1.1",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
-                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-workflow.git",
+                "url": "https://github.com/ergonode/workflow.git",
                 "reference": "373eaa24866274163872597da6dda1c33de73220"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ergonode/workflow/zipball/373eaa24866274163872597da6dda1c33de73220",
+                "reference": "373eaa24866274163872597da6dda1c33de73220",
+                "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.9",
@@ -2470,11 +2470,7 @@
                     "Ergonode\\Workflow\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Ergonode\\Workflow\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "OSL-3.0"
             ],
