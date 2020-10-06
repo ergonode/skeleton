@@ -3,7 +3,6 @@
     "type": "project",
     "license": "OSL-3",
     "description": "Ergonode project recommended to create backend application",
-    "minimum-stability": "dev",
     "require": {
         "php": "^7.4",
         "ext-ctype": "*",
@@ -32,7 +31,6 @@
         "ergonode/fixture": "^0.10.0",
         "ergonode/grid": "^0.10.0",
         "ergonode/importer": "^0.10.0",
-        "ergonode/importer-magento-1": "^0.10.0",
         "ergonode/migration": "^0.10.0",
         "ergonode/multimedia": "^0.10.0",
         "ergonode/notification": "^0.10.0",
@@ -54,9 +52,17 @@
         "symfony/monolog-bundle": "^3.5",
         "symfony/orm-pack": "*",
         "symfony/twig-bundle": "4.4.*",
+        "symfony/validator": "4.4.7",
         "symfony/yaml": "4.4.*"
     },
     "require-dev": {
+        "behat/behat": "^3.7",
+        "behat/mink": "^1.8",
+        "behat/mink-browserkit-driver": "^1.3",
+        "behat/symfony2-extension": "^2.1",
+        "behatch/contexts": "^3.3",
+        "friends-of-behat/symfony-extension": "^2.1",
+        "phing/phing": "^2.16"
     },
     "config": {
         "bin-dir": "bin",
