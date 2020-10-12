@@ -4,28 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0fa933b3700c93c833870189a3b8b577",
+    "content-hash": "693035301f15a0afd570e6333a95201c",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
-            "version": "1.8.2",
+            "version": "1.11.99",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/package-versions-deprecated.git",
-                "reference": "7a8001fe2c9befad9d001bf54ef0b4a17d950d0f"
+                "reference": "c8c9aa8a14cc3d3bec86d0a8c3fa52ea79936855"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/7a8001fe2c9befad9d001bf54ef0b4a17d950d0f",
-                "reference": "7a8001fe2c9befad9d001bf54ef0b4a17d950d0f",
+                "url": "https://api.github.com/repos/composer/package-versions-deprecated/zipball/c8c9aa8a14cc3d3bec86d0a8c3fa52ea79936855",
+                "reference": "c8c9aa8a14cc3d3bec86d0a8c3fa52ea79936855",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.1.0 || ^2.0",
-                "php": "^7"
+                "php": "^7 || ^8"
             },
             "replace": {
-                "ocramius/package-versions": "1.8.99"
+                "ocramius/package-versions": "1.11.99"
             },
             "require-dev": {
                 "composer/composer": "^1.9.3 || ^2.0@dev",
@@ -59,7 +59,7 @@
                 }
             ],
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
-            "time": "2020-07-10T14:10:26+00:00"
+            "time": "2020-08-25T05:50:16+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -964,19 +964,20 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.7.3",
+            "version": "2.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "d95e03ba660d50d785a9925f41927fef0ee553cf"
+                "reference": "7d84a4998091ece4d645253ac65de9f879eeed2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/d95e03ba660d50d785a9925f41927fef0ee553cf",
-                "reference": "d95e03ba660d50d785a9925f41927fef0ee553cf",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/7d84a4998091ece4d645253ac65de9f879eeed2f",
+                "reference": "7d84a4998091ece4d645253ac65de9f879eeed2f",
                 "shasum": ""
             },
             "require": {
+                "composer/package-versions-deprecated": "^1.8",
                 "doctrine/annotations": "^1.8",
                 "doctrine/cache": "^1.9.1",
                 "doctrine/collections": "^1.5",
@@ -988,7 +989,6 @@
                 "doctrine/lexer": "^1.0",
                 "doctrine/persistence": "^1.3.3 || ^2.0",
                 "ext-pdo": "*",
-                "ocramius/package-versions": "^1.2",
                 "php": "^7.1",
                 "symfony/console": "^3.0|^4.0|^5.0"
             },
@@ -1048,7 +1048,7 @@
                 "database",
                 "orm"
             ],
-            "time": "2020-05-26T16:03:49+00:00"
+            "time": "2020-10-10T17:11:26+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -1325,17 +1325,17 @@
         },
         {
             "name": "ergonode/account",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/account.git",
-                "reference": "05e037807b6036d723defe9d40c845037d1cbac6"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-account.git",
+                "reference": "0b3ce5918a6715ccd959c00075975e5e6459ac25"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/account/zipball/05e037807b6036d723defe9d40c845037d1cbac6",
-                "reference": "05e037807b6036d723defe9d40c845037d1cbac6",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/account/ergonode-account-0.10.2-e98699.tar",
+                "reference": "0b3ce5918a6715ccd959c00075975e5e6459ac25",
+                "shasum": "0593bc02937d2de20929d2cfd87a75f513b7237b"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1369,27 +1369,31 @@
                     "Ergonode\\Account\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Account\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Account",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-12T06:42:21+00:00"
         },
         {
             "name": "ergonode/api",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/api.git",
-                "reference": "8648c8ef9a8f9e909fef10e358d6cffdfae3b704"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-api.git",
+                "reference": "1fe0ae3f56fa7ab1166025eb95ec48ee6463bbeb"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/api/zipball/8648c8ef9a8f9e909fef10e358d6cffdfae3b704",
-                "reference": "8648c8ef9a8f9e909fef10e358d6cffdfae3b704",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/api/ergonode-api-0.10.2-addc8e.tar",
+                "reference": "1fe0ae3f56fa7ab1166025eb95ec48ee6463bbeb",
+                "shasum": "2f2f700f86b37db050f166bc57a50cfd598f6b2a"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1413,27 +1417,31 @@
                     "Ergonode\\Api\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Api\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - API",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-09-16T10:10:30+00:00"
         },
         {
             "name": "ergonode/attribute",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/attribute.git",
-                "reference": "9328210bb6a881d1c5ac6b5567a8949b9882fcfc"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-attribute.git",
+                "reference": "0e7a8d4a9f3024ec1be8a7a17e109fc7400c27ad"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/attribute/zipball/9328210bb6a881d1c5ac6b5567a8949b9882fcfc",
-                "reference": "9328210bb6a881d1c5ac6b5567a8949b9882fcfc",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/attribute/ergonode-attribute-0.10.2-458428.tar",
+                "reference": "0e7a8d4a9f3024ec1be8a7a17e109fc7400c27ad",
+                "shasum": "92fd775aec84673c53d8b7a0802af660a5023488"
             },
             "require": {
                 "ergonode/api": "^0.10.0",
@@ -1468,27 +1476,31 @@
                     "Ergonode\\Attribute\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Attribute\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Attribute",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-12T06:42:21+00:00"
         },
         {
             "name": "ergonode/authentication",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/authentication.git",
-                "reference": "ba80f67b8e13e93e1dd24365c829f4f9fe5bfba1"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-authentication.git",
+                "reference": "cf9ab71a10a599ac229bbf9e84d259e441340a84"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/authentication/zipball/ba80f67b8e13e93e1dd24365c829f4f9fe5bfba1",
-                "reference": "ba80f67b8e13e93e1dd24365c829f4f9fe5bfba1",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/authentication/ergonode-authentication-0.10.2-00de00.tar",
+                "reference": "cf9ab71a10a599ac229bbf9e84d259e441340a84",
+                "shasum": "ab8fda3fdc68b4a362d720c59e6c6afa74bb9b6d"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1518,27 +1530,31 @@
                     "Ergonode\\Authentication\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Authentication\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Authentication",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-01T10:43:59+00:00"
         },
         {
             "name": "ergonode/category",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/category.git",
-                "reference": "a6c7e769152d7f81c75eeff64a47fd6a1198314a"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-category.git",
+                "reference": "77f9eac301a1f352d3df0c58e31cec5d48f5989f"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/category/zipball/a6c7e769152d7f81c75eeff64a47fd6a1198314a",
-                "reference": "a6c7e769152d7f81c75eeff64a47fd6a1198314a",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/category/ergonode-category-0.10.2-a788d2.tar",
+                "reference": "77f9eac301a1f352d3df0c58e31cec5d48f5989f",
+                "shasum": "c2cc61e9f930f6cfde5958b51999c315e2803e1f"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1570,27 +1586,31 @@
                     "Ergonode\\Category\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Category\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Category",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-07T07:19:43+00:00"
         },
         {
             "name": "ergonode/channel",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/channel-backend.git",
-                "reference": "05c8dd582bc3a4472e396554eac53f962b324670"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-channel.git",
+                "reference": "cb73a18537d8562dd46025bdf34bcf9e448a4e1b"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/channel-backend/zipball/05c8dd582bc3a4472e396554eac53f962b324670",
-                "reference": "05c8dd582bc3a4472e396554eac53f962b324670",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/channel/ergonode-channel-0.10.2-04b01e.tar",
+                "reference": "cb73a18537d8562dd46025bdf34bcf9e448a4e1b",
+                "shasum": "4e3a17b395858961a3e51d945d41550b0baad4e9"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1620,27 +1640,31 @@
                     "Ergonode\\Channel\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Channel\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Channel",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-07T07:06:39+00:00"
         },
         {
             "name": "ergonode/comment",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/comment.git",
-                "reference": "af2daf2f5d49535c0d49e3e18d903e26d6a1b9ac"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-comment.git",
+                "reference": "89fb6991fb055a3e195dcb915ecc28c0a9386559"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/comment/zipball/af2daf2f5d49535c0d49e3e18d903e26d6a1b9ac",
-                "reference": "af2daf2f5d49535c0d49e3e18d903e26d6a1b9ac",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/comment/ergonode-comment-0.10.2-060c34.tar",
+                "reference": "89fb6991fb055a3e195dcb915ecc28c0a9386559",
+                "shasum": "c44db514e08042ad45c6e18a2a616b85ec9ff273"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1669,27 +1693,31 @@
                     "Ergonode\\Comment\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Comment\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Comment",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-09-23T11:35:10+00:00"
         },
         {
             "name": "ergonode/completeness",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/completeness.git",
-                "reference": "16b5b626304d9b1cfa81398762c7aac4dcd5277d"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-completeness.git",
+                "reference": "6ce29b39180f5ad47e8a0390f4a4fcbccb6706ba"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/completeness/zipball/16b5b626304d9b1cfa81398762c7aac4dcd5277d",
-                "reference": "16b5b626304d9b1cfa81398762c7aac4dcd5277d",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/completeness/ergonode-completeness-0.10.2-8ae86a.tar",
+                "reference": "6ce29b39180f5ad47e8a0390f4a4fcbccb6706ba",
+                "shasum": "556b986fd9ff05a52c00f9e61a19871ba5a2a713"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1719,27 +1747,31 @@
                     "Ergonode\\Completeness\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Completeness\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - completeness",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-12T06:30:35+00:00"
         },
         {
             "name": "ergonode/condition",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/condition.git",
-                "reference": "9270f742ac2fa92b58bdf52afc48234195535beb"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-condition.git",
+                "reference": "7648b506929a9966d244c298dccc19614a7c8f4f"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/condition/zipball/9270f742ac2fa92b58bdf52afc48234195535beb",
-                "reference": "9270f742ac2fa92b58bdf52afc48234195535beb",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/condition/ergonode-condition-0.10.2-d9fe5e.tar",
+                "reference": "7648b506929a9966d244c298dccc19614a7c8f4f",
+                "shasum": "c8461fa64888d83ba939cca9caf3e4f0be933090"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1757,6 +1789,7 @@
                 "php": "^7.4",
                 "ramsey/uuid": "^3.8",
                 "sensio/framework-extra-bundle": "^5.5",
+                "symfony/expression-language": "^4.4",
                 "symfony/form": "^4.4",
                 "symfony/messenger": "^4.4",
                 "symfony/translation": "^4.4",
@@ -1771,27 +1804,31 @@
                     "Ergonode\\Condition\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Condition\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Condition",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-07T13:23:28+00:00"
         },
         {
             "name": "ergonode/core",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/core.git",
-                "reference": "a06bdb663d9ebd3b7e3eef5665934cac6b1f0852"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-core.git",
+                "reference": "77f533dd8f8764984bbdfd24c2c78cbee3ba59e7"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/core/zipball/a06bdb663d9ebd3b7e3eef5665934cac6b1f0852",
-                "reference": "a06bdb663d9ebd3b7e3eef5665934cac6b1f0852",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/core/ergonode-core-0.10.2-8a0fcd.tar",
+                "reference": "77f533dd8f8764984bbdfd24c2c78cbee3ba59e7",
+                "shasum": "1a19abad874f602f342eefea96986e909df3daac"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1813,7 +1850,12 @@
                 "symfony/translation": "^4.4"
             },
             "require-dev": {
+                "behat/behat": "^3.6",
+                "behatch/contexts": "^3.3",
                 "phpunit/phpunit": "^9"
+            },
+            "suggest": {
+                "behatch/contexts": "For using providing behat contexts"
             },
             "type": "ergonode-module",
             "autoload": {
@@ -1821,27 +1863,31 @@
                     "Ergonode\\Core\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Core\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Core",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-09T10:30:37+00:00"
         },
         {
             "name": "ergonode/designer",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/designer.git",
-                "reference": "8778283831c6e898f32f401070b619ba7569dca2"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-designer.git",
+                "reference": "e543272aa0d3a8a095ebcaec8ce920391be5d6c1"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/designer/zipball/8778283831c6e898f32f401070b619ba7569dca2",
-                "reference": "8778283831c6e898f32f401070b619ba7569dca2",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/designer/ergonode-designer-0.10.2-91e849.tar",
+                "reference": "e543272aa0d3a8a095ebcaec8ce920391be5d6c1",
+                "shasum": "dce4f1ee052a46275118e41581e2fd05a4c68b1f"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1873,27 +1919,31 @@
                     "Ergonode\\Designer\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Designer\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Designer",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-08T08:44:54+00:00"
         },
         {
             "name": "ergonode/editor",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/editor.git",
-                "reference": "04626635fb45325ea5cb33a4e0451e1f3b67fdf0"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-editor.git",
+                "reference": "7d45dae094bb30171896e882a8f87b86be24de8c"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/editor/zipball/04626635fb45325ea5cb33a4e0451e1f3b67fdf0",
-                "reference": "04626635fb45325ea5cb33a4e0451e1f3b67fdf0",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/editor/ergonode-editor-0.10.2-9460fc.tar",
+                "reference": "7d45dae094bb30171896e882a8f87b86be24de8c",
+                "shasum": "a2143858590e7b103a13cd1bff81e41bf15e19d2"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1925,27 +1975,31 @@
                     "Ergonode\\Editor\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Editor\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Editor",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-12T06:30:35+00:00"
         },
         {
             "name": "ergonode/es",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/es.git",
-                "reference": "82e250e596eaf2eefe664eb8db420e3c507d574d"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-es.git",
+                "reference": "89f5544d5dc5c2aabd2edb699bb5261f3e441c4d"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/es/zipball/82e250e596eaf2eefe664eb8db420e3c507d574d",
-                "reference": "82e250e596eaf2eefe664eb8db420e3c507d574d",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/es/ergonode-es-0.10.2-76896d.tar",
+                "reference": "89f5544d5dc5c2aabd2edb699bb5261f3e441c4d",
+                "shasum": "cf122ed62416026221acd73cf9ab9e3777663032"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -1969,27 +2023,31 @@
                     "Ergonode\\EventSourcing\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\EventSourcing\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Event Sourcing",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-01T11:04:41+00:00"
         },
         {
             "name": "ergonode/exporter",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/exporter-backend.git",
-                "reference": "3bbaeaa76b459a1510896630a080962467b641b8"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-exporter.git",
+                "reference": "7803fa81f13297e27348dbfebfe28cfb3ba67093"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/exporter-backend/zipball/3bbaeaa76b459a1510896630a080962467b641b8",
-                "reference": "3bbaeaa76b459a1510896630a080962467b641b8",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/exporter/ergonode-exporter-0.10.2-1e9f36.tar",
+                "reference": "7803fa81f13297e27348dbfebfe28cfb3ba67093",
+                "shasum": "3192fd1f766ce0df53292401f78a04df8997b723"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2012,27 +2070,31 @@
                     "Ergonode\\Exporter\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Exporter\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Exporter",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-07T07:19:43+00:00"
         },
         {
             "name": "ergonode/exporter-file",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/exporter-file-backend.git",
-                "reference": "d4165a2e6ca3057a90e8e4d39cc91b4cdfbc8aac"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-exporter-file.git",
+                "reference": "f7b535052279b631eee21c9b7556e0996be11eec"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/exporter-file-backend/zipball/d4165a2e6ca3057a90e8e4d39cc91b4cdfbc8aac",
-                "reference": "d4165a2e6ca3057a90e8e4d39cc91b4cdfbc8aac",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/exporter-file/ergonode-exporter-file-0.10.2-712fa3.tar",
+                "reference": "f7b535052279b631eee21c9b7556e0996be11eec",
+                "shasum": "90b85352776f0ba4c5ac5756289f114e4f7cd394"
             },
             "require": {
                 "ergonode/channel": "^0.10.0",
@@ -2049,27 +2111,31 @@
                     "Ergonode\\ExporterFile\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\ExporterFile\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Exporter File",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-07T07:06:39+00:00"
         },
         {
             "name": "ergonode/fixture",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/fixture.git",
-                "reference": "4671269515879f0d124ab63310a209abde91939a"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-fixture.git",
+                "reference": "ae3d1f05fb1b8606a13f9506abdb25f4f789f326"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/fixture/zipball/4671269515879f0d124ab63310a209abde91939a",
-                "reference": "4671269515879f0d124ab63310a209abde91939a",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/fixture/ergonode-fixture-0.10.2-f8b36f.tar",
+                "reference": "ae3d1f05fb1b8606a13f9506abdb25f4f789f326",
+                "shasum": "8f195d37a06197504246bdeab9cab3c5e541cca0"
             },
             "require": {
                 "ergonode/account": "^0.10.0",
@@ -2101,27 +2167,31 @@
                     "Ergonode\\Fixture\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Fixture\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Fixture",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-09-16T10:10:30+00:00"
         },
         {
             "name": "ergonode/grid",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/grid.git",
-                "reference": "87062d5e34a45f498fb61a931b4ac4cdac1878b1"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-grid.git",
+                "reference": "d74f08ceb71e0ee798fc836a9a732686258f564a"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/grid/zipball/87062d5e34a45f498fb61a931b4ac4cdac1878b1",
-                "reference": "87062d5e34a45f498fb61a931b4ac4cdac1878b1",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/grid/ergonode-grid-0.10.2-cdd65f.tar",
+                "reference": "d74f08ceb71e0ee798fc836a9a732686258f564a",
+                "shasum": "ab187409b49904c7ca554cea79b9b07a1a290894"
             },
             "require": {
                 "doctrine/collections": "^1.6",
@@ -2143,27 +2213,31 @@
                     "Ergonode\\Grid\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Grid\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Grid",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-05T11:18:35+00:00"
         },
         {
             "name": "ergonode/importer",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/importer.git",
-                "reference": "f74e2e8bd6e3c6996492912ff769ce9fe46c8d76"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-importer.git",
+                "reference": "cfd14d0c294aabe98eda8582748553928903e1b6"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/importer/zipball/f74e2e8bd6e3c6996492912ff769ce9fe46c8d76",
-                "reference": "f74e2e8bd6e3c6996492912ff769ce9fe46c8d76",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/importer/ergonode-importer-0.10.2-03ea9d.tar",
+                "reference": "cfd14d0c294aabe98eda8582748553928903e1b6",
+                "shasum": "5492e45e4e3abdab53709a2faf088b29b599685e"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2194,27 +2268,83 @@
                     "Ergonode\\Importer\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Importer\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Importer",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-01T09:37:44+00:00"
+        },
+        {
+            "name": "ergonode/mailer",
+            "version": "0.10.2",
+            "source": {
+                "type": "git",
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-mailer.git",
+                "reference": "c134493f0a14cf3c5ab615a99ef60d037b313ede"
+            },
+            "dist": {
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/mailer/ergonode-mailer-0.10.2-bdb6b1.tar",
+                "reference": "c134493f0a14cf3c5ab615a99ef60d037b313ede",
+                "shasum": "eac5a1000a0aaf296cfeac5e550b44226aa1bb1b"
+            },
+            "require": {
+                "doctrine/dbal": "^2.10",
+                "ergonode/core": "^0.10.0",
+                "ergonode/shared-kernel": "^0.10.0",
+                "jms/serializer": "^3.4",
+                "nelmio/api-doc-bundle": "^3.6",
+                "nelmio/cors-bundle": "^1.5 || ^2.0",
+                "php": "^7.4",
+                "ramsey/collection": "^1.1",
+                "ramsey/uuid": "^3.8",
+                "sensio/framework-extra-bundle": "^5.5",
+                "symfony/http-foundation": "^4.4",
+                "symfony/mailer": "^4.4",
+                "symfony/validator": "^4.4",
+                "twig/twig": "^3.0",
+                "webmozart/assert": "^1.7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9"
+            },
+            "type": "ergonode-module",
+            "autoload": {
+                "psr-4": {
+                    "Ergonode\\Mailer\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Mailer\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Ergonode - Mailer",
+            "homepage": "https://ergonode.com",
+            "time": "2020-10-07T10:35:35+00:00"
         },
         {
             "name": "ergonode/migration",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/migration.git",
-                "reference": "4a25a64d62bcfcaef09d0bb7aeb96fef29c3a442"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-migration.git",
+                "reference": "439ed4dc2c2e7e76a7c9b5d8e7198bc9faf15c58"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/migration/zipball/4a25a64d62bcfcaef09d0bb7aeb96fef29c3a442",
-                "reference": "4a25a64d62bcfcaef09d0bb7aeb96fef29c3a442",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/migration/ergonode-migration-0.10.2-7bdfcb.tar",
+                "reference": "439ed4dc2c2e7e76a7c9b5d8e7198bc9faf15c58",
+                "shasum": "cb02cf4edd2c9e7683b6613f4ca8b3b12a5a4d1b"
             },
             "require": {
                 "doctrine/migrations": "2.2.x",
@@ -2233,27 +2363,31 @@
                     "Ergonode\\Migration\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Migration\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Migration",
             "homepage": "https://ergonode.com",
-            "time": "2020-04-27T11:12:58+00:00"
+            "time": "2020-09-16T10:10:30+00:00"
         },
         {
             "name": "ergonode/multimedia",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/multimedia.git",
-                "reference": "973fe493fdcf252f84508836b5c9d6f8b4b4f2c2"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-multimedia.git",
+                "reference": "333cfaecce27e51d58c0cf8514248f8f8ebea877"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/multimedia/zipball/973fe493fdcf252f84508836b5c9d6f8b4b4f2c2",
-                "reference": "973fe493fdcf252f84508836b5c9d6f8b4b4f2c2",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/multimedia/ergonode-multimedia-0.10.2-f0b56d.tar",
+                "reference": "333cfaecce27e51d58c0cf8514248f8f8ebea877",
+                "shasum": "d8b8cb73a34d9e5a654b5ec24c73859ab10e9b71"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2284,27 +2418,31 @@
                     "Ergonode\\Multimedia\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Multimedia\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Multimedia",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-09T11:59:20+00:00"
         },
         {
             "name": "ergonode/notification",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/notification.git",
-                "reference": "ceab10715116679efe44c02dc1e9dd957a7f79c8"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-notification.git",
+                "reference": "41d7959568b858bae934acefcd71ad455babdca7"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/notification/zipball/ceab10715116679efe44c02dc1e9dd957a7f79c8",
-                "reference": "ceab10715116679efe44c02dc1e9dd957a7f79c8",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/notification/ergonode-notification-0.10.2-1c0993.tar",
+                "reference": "41d7959568b858bae934acefcd71ad455babdca7",
+                "shasum": "9eebaa354b58e3a617519a9a236ce72d80c0ae53"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2332,27 +2470,31 @@
                     "Ergonode\\Notification\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Notification\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Notification",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-09-24T07:01:09+00:00"
         },
         {
             "name": "ergonode/product",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/product.git",
-                "reference": "1b3e46067c8fdc434c801d50aaa3a81472e30f78"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-product.git",
+                "reference": "86b6c5cf51f9dada186d0cab5cddfcfe19d48070"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/product/zipball/1b3e46067c8fdc434c801d50aaa3a81472e30f78",
-                "reference": "1b3e46067c8fdc434c801d50aaa3a81472e30f78",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/product/ergonode-product-0.10.2-301a75.tar",
+                "reference": "86b6c5cf51f9dada186d0cab5cddfcfe19d48070",
+                "shasum": "471a083e6a49e723a49be5258cc5c5eebb665cb5"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2384,27 +2526,31 @@
                     "Ergonode\\Product\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Product\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Product",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-12T08:11:05+00:00"
         },
         {
             "name": "ergonode/product-collection",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/product-collection.git",
-                "reference": "ea71c6a5f02dc8256e630153a95f0b71e5855208"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-product-collection.git",
+                "reference": "26bc086cfe4d13408dda1621e8b12bac2de78b33"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/product-collection/zipball/ea71c6a5f02dc8256e630153a95f0b71e5855208",
-                "reference": "ea71c6a5f02dc8256e630153a95f0b71e5855208",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/product-collection/ergonode-product-collection-0.10.2-704c2a.tar",
+                "reference": "26bc086cfe4d13408dda1621e8b12bac2de78b33",
+                "shasum": "84cd46160bd7c9a114be2cc85c974f7f5a75d91e"
             },
             "require": {
                 "ergonode/api": "^0.10.0",
@@ -2424,27 +2570,31 @@
                     "Ergonode\\ProductCollection\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\ProductCollection\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Product Collection",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-12T08:11:05+00:00"
         },
         {
             "name": "ergonode/reader",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/reader.git",
-                "reference": "893b317f6511749fc8cf5b2ce141c7f35e9ffcf8"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-reader.git",
+                "reference": "0dfd0a88d0e20634b81beda48da2e2632a08f665"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/reader/zipball/893b317f6511749fc8cf5b2ce141c7f35e9ffcf8",
-                "reference": "893b317f6511749fc8cf5b2ce141c7f35e9ffcf8",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/reader/ergonode-reader-0.10.2-4beeb6.tar",
+                "reference": "0dfd0a88d0e20634b81beda48da2e2632a08f665",
+                "shasum": "11005e9e0957752241dfad669e28c28039c7ab47"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2472,27 +2622,31 @@
                     "Ergonode\\Reader\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Reader\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Reader",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-09-16T10:10:30+00:00"
         },
         {
             "name": "ergonode/segment",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/segment.git",
-                "reference": "22b3d1bb68e50c47686fa7de04e6571864083b4a"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-segment.git",
+                "reference": "935aa22774f7396b6f0232f4a0e0fc9b6e259342"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/segment/zipball/22b3d1bb68e50c47686fa7de04e6571864083b4a",
-                "reference": "22b3d1bb68e50c47686fa7de04e6571864083b4a",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/segment/ergonode-segment-0.10.2-61a5fd.tar",
+                "reference": "935aa22774f7396b6f0232f4a0e0fc9b6e259342",
+                "shasum": "4fe92fa710d42747ef0f8f4b1daf3606cf422b55"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2523,27 +2677,31 @@
                     "Ergonode\\Segment\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Segment\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Segment",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-07T13:23:28+00:00"
         },
         {
             "name": "ergonode/shared-kernel",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/shared-kernel.git",
-                "reference": "6959dc787565dc62b7357066b35a33a3e8de23cc"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-shared-kernel.git",
+                "reference": "6ba6897fd700d23f51562a7b66735b99f8567a70"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/shared-kernel/zipball/6959dc787565dc62b7357066b35a33a3e8de23cc",
-                "reference": "6959dc787565dc62b7357066b35a33a3e8de23cc",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/shared-kernel/ergonode-shared-kernel-0.10.2-7cb139.tar",
+                "reference": "6ba6897fd700d23f51562a7b66735b99f8567a70",
+                "shasum": "4002f18a2328e5f9a02bf9ca94f1db3c8bbcb1e2"
             },
             "require": {
                 "egulias/email-validator": "^2.1",
@@ -2560,27 +2718,31 @@
                     "Ergonode\\SharedKernel\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\SharedKernel\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Shared Kernel",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-05T19:36:05+00:00"
         },
         {
             "name": "ergonode/transformer",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/transformer.git",
-                "reference": "b8fd842b849d4f63d7e34da148a240b56a068016"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-transformer.git",
+                "reference": "aaed3a5006510f8fc20c2352f2da283745d4b5e2"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/transformer/zipball/b8fd842b849d4f63d7e34da148a240b56a068016",
-                "reference": "b8fd842b849d4f63d7e34da148a240b56a068016",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/transformer/ergonode-transformer-0.10.2-d5b96b.tar",
+                "reference": "aaed3a5006510f8fc20c2352f2da283745d4b5e2",
+                "shasum": "08cbda4c5d1275f4c45fa335060f7a0c4535a5e7"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2608,27 +2770,31 @@
                     "Ergonode\\Transformer\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Transformer\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Transformer",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-01T09:37:44+00:00"
         },
         {
             "name": "ergonode/value",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/value.git",
-                "reference": "64038183cea98abbf05d4522219d50684a528d7f"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-value.git",
+                "reference": "d0ba8ea399f74994654bf39b6cbf56161d224c53"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/value/zipball/64038183cea98abbf05d4522219d50684a528d7f",
-                "reference": "64038183cea98abbf05d4522219d50684a528d7f",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/value/ergonode-value-0.10.2-ac4fa9.tar",
+                "reference": "d0ba8ea399f74994654bf39b6cbf56161d224c53",
+                "shasum": "ba6d6badb4127651e6a421bdfd688daa555b642a"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2650,27 +2816,31 @@
                     "Ergonode\\Value\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Value\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Value",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-09-25T10:47:13+00:00"
         },
         {
             "name": "ergonode/workflow",
-            "version": "0.10.0",
+            "version": "0.10.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ergonode/workflow.git",
-                "reference": "9f3da2e6f0bcf5413358591a279116698744af10"
+                "url": "ssh://git@bitbucket.abbc.pl:7999/erg/module-backend-workflow.git",
+                "reference": "e350959b6107e62ee4e9ce27f909c9c161d969f3"
             },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ergonode/workflow/zipball/9f3da2e6f0bcf5413358591a279116698744af10",
-                "reference": "9f3da2e6f0bcf5413358591a279116698744af10",
-                "shasum": ""
+                "type": "tar",
+                "url": "https://satis.abbc.pl/dist/ergonode/workflow/ergonode-workflow-0.10.2-a71a19.tar",
+                "reference": "e350959b6107e62ee4e9ce27f909c9c161d969f3",
+                "shasum": "8d00187acd1941e5d26706752b619f801cf1e153"
             },
             "require": {
                 "doctrine/dbal": "^2.10",
@@ -2693,13 +2863,17 @@
                     "Ergonode\\Workflow\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Ergonode\\Workflow\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "OSL-3.0"
             ],
             "description": "Ergonode - Workflow",
             "homepage": "https://ergonode.com",
-            "time": "2020-09-14T05:45:46+00:00"
+            "time": "2020-10-09T10:30:37+00:00"
         },
         {
             "name": "exsyst/swagger",
@@ -4148,21 +4322,21 @@
         },
         {
             "name": "ocramius/proxy-manager",
-            "version": "2.8.1",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/ProxyManager.git",
-                "reference": "371c8f2d9d1e888ce1f8f2137d9187252b07ee94"
+                "reference": "ac1dd414fd114cfc0da9930e0ab46063c2f5e62a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/371c8f2d9d1e888ce1f8f2137d9187252b07ee94",
-                "reference": "371c8f2d9d1e888ce1f8f2137d9187252b07ee94",
+                "url": "https://api.github.com/repos/Ocramius/ProxyManager/zipball/ac1dd414fd114cfc0da9930e0ab46063c2f5e62a",
+                "reference": "ac1dd414fd114cfc0da9930e0ab46063c2f5e62a",
                 "shasum": ""
             },
             "require": {
                 "laminas/laminas-code": "^3.4.1",
-                "ocramius/package-versions": "^1.8.0,<1.10.0",
+                "ocramius/package-versions": "^1.8.0",
                 "php": "~7.4.1",
                 "webimpress/safe-writer": "^2.0.1"
             },
@@ -4219,7 +4393,7 @@
                 "proxy pattern",
                 "service proxies"
             ],
-            "time": "2020-07-13T19:23:57+00:00"
+            "time": "2020-04-13T14:42:16+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -4508,6 +4682,69 @@
                 "psr-3"
             ],
             "time": "2020-03-23T09:12:05+00:00"
+        },
+        {
+            "name": "ramsey/collection",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ramsey/collection.git",
+                "reference": "24d93aefb2cd786b7edd9f45b554aea20b28b9b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/collection/zipball/24d93aefb2cd786b7edd9f45b554aea20b28b9b1",
+                "reference": "24d93aefb2cd786b7edd9f45b554aea20b28b9b1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.3",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+                "ergebnis/composer-normalize": "^2.6",
+                "fzaninotto/faker": "^1.5",
+                "hamcrest/hamcrest-php": "^2",
+                "jangregor/phpstan-prophecy": "^0.6",
+                "mockery/mockery": "^1.3",
+                "phpstan/extension-installer": "^1",
+                "phpstan/phpstan": "^0.12.32",
+                "phpstan/phpstan-mockery": "^0.12.5",
+                "phpstan/phpstan-phpunit": "^0.12.11",
+                "phpunit/phpunit": "^8.5",
+                "psy/psysh": "^0.10.4",
+                "slevomat/coding-standard": "^6.3",
+                "squizlabs/php_codesniffer": "^3.5",
+                "vimeo/psalm": "^3.12.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ramsey\\Collection\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Ramsey",
+                    "email": "ben@benramsey.com",
+                    "homepage": "https://benramsey.com"
+                }
+            ],
+            "description": "A PHP 7.2+ library for representing and manipulating collections.",
+            "keywords": [
+                "array",
+                "collection",
+                "hash",
+                "map",
+                "queue",
+                "set"
+            ],
+            "time": "2020-09-10T20:58:17+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -4960,16 +5197,16 @@
         },
         {
             "name": "symfony/asset",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/asset.git",
-                "reference": "384d36d53771955d432f0e0bf6470f1c9e6a716f"
+                "reference": "9b446eb7c16347088663dc18d38fb0f3b536b7e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/asset/zipball/384d36d53771955d432f0e0bf6470f1c9e6a716f",
-                "reference": "384d36d53771955d432f0e0bf6470f1c9e6a716f",
+                "url": "https://api.github.com/repos/symfony/asset/zipball/9b446eb7c16347088663dc18d38fb0f3b536b7e2",
+                "reference": "9b446eb7c16347088663dc18d38fb0f3b536b7e2",
                 "shasum": ""
             },
             "require": {
@@ -5012,20 +5249,20 @@
             ],
             "description": "Symfony Asset Component",
             "homepage": "https://symfony.com",
-            "time": "2020-07-05T09:39:30+00:00"
+            "time": "2020-09-02T16:08:58+00:00"
         },
         {
             "name": "symfony/cache",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "f45591fff4ecb08825c41f5b7ec51218510301c8"
+                "reference": "969a76c2dbce7e4306684f5376718147d1ec4ae7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/f45591fff4ecb08825c41f5b7ec51218510301c8",
-                "reference": "f45591fff4ecb08825c41f5b7ec51218510301c8",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/969a76c2dbce7e4306684f5376718147d1ec4ae7",
+                "reference": "969a76c2dbce7e4306684f5376718147d1ec4ae7",
                 "shasum": ""
             },
             "require": {
@@ -5091,7 +5328,7 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2020-08-31T16:52:20+00:00"
+            "time": "2020-09-27T12:40:39+00:00"
         },
         {
             "name": "symfony/cache-contracts",
@@ -5157,16 +5394,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "043bf8652c307ebc23ce44047d215eec889d8850"
+                "reference": "7c5a1002178a612787c291a4f515f87b19176b61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/043bf8652c307ebc23ce44047d215eec889d8850",
-                "reference": "043bf8652c307ebc23ce44047d215eec889d8850",
+                "url": "https://api.github.com/repos/symfony/config/zipball/7c5a1002178a612787c291a4f515f87b19176b61",
+                "reference": "7c5a1002178a612787c291a4f515f87b19176b61",
                 "shasum": ""
             },
             "require": {
@@ -5217,20 +5454,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-10T07:27:51+00:00"
+            "time": "2020-10-02T07:34:48+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "b39fd99b9297b67fb7633b7d8083957a97e1e727"
+                "reference": "90933b39c7b312fc3ceaa1ddeac7eb48cb953124"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/b39fd99b9297b67fb7633b7d8083957a97e1e727",
-                "reference": "b39fd99b9297b67fb7633b7d8083957a97e1e727",
+                "url": "https://api.github.com/repos/symfony/console/zipball/90933b39c7b312fc3ceaa1ddeac7eb48cb953124",
+                "reference": "90933b39c7b312fc3ceaa1ddeac7eb48cb953124",
                 "shasum": ""
             },
             "require": {
@@ -5294,7 +5531,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2020-09-02T07:07:21+00:00"
+            "time": "2020-09-15T07:58:55+00:00"
         },
         {
             "name": "symfony/debug",
@@ -5355,16 +5592,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "384c2601e5a6228d60b041911d63f010e0885ffb"
+                "reference": "89274c8847dff2ed703e481843eb9159ca25cc6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/384c2601e5a6228d60b041911d63f010e0885ffb",
-                "reference": "384c2601e5a6228d60b041911d63f010e0885ffb",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/89274c8847dff2ed703e481843eb9159ca25cc6e",
+                "reference": "89274c8847dff2ed703e481843eb9159ca25cc6e",
                 "shasum": ""
             },
             "require": {
@@ -5424,20 +5661,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2020-09-01T17:42:15+00:00"
+            "time": "2020-09-10T10:08:39+00:00"
         },
         {
             "name": "symfony/doctrine-bridge",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/doctrine-bridge.git",
-                "reference": "f0a138b4c27cf2d82a818762fe8f58a6cefda92e"
+                "reference": "98c60d6dbaafeaf6204d3476ab1b54335ff7f540"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/doctrine-bridge/zipball/f0a138b4c27cf2d82a818762fe8f58a6cefda92e",
-                "reference": "f0a138b4c27cf2d82a818762fe8f58a6cefda92e",
+                "url": "https://api.github.com/repos/symfony/doctrine-bridge/zipball/98c60d6dbaafeaf6204d3476ab1b54335ff7f540",
+                "reference": "98c60d6dbaafeaf6204d3476ab1b54335ff7f540",
                 "shasum": ""
             },
             "require": {
@@ -5469,7 +5706,7 @@
                 "symfony/config": "^4.2|^5.0",
                 "symfony/dependency-injection": "^3.4|^4.0|^5.0",
                 "symfony/expression-language": "^3.4|^4.0|^5.0",
-                "symfony/form": "^4.4|^5.0",
+                "symfony/form": "^4.4.11|^5.0.11",
                 "symfony/http-kernel": "^4.3.7",
                 "symfony/messenger": "^4.4|^5.0",
                 "symfony/property-access": "^3.4|^4.0|^5.0",
@@ -5519,20 +5756,20 @@
             ],
             "description": "Symfony Doctrine Bridge",
             "homepage": "https://symfony.com",
-            "time": "2020-08-21T12:55:23+00:00"
+            "time": "2020-09-27T14:14:06+00:00"
         },
         {
             "name": "symfony/dotenv",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
-                "reference": "a9eb95c87c2965d0e7dfda9c5e87e4fb590d1f4e"
+                "reference": "f17675595fd7527c57d11bd3d733eb5d41600128"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dotenv/zipball/a9eb95c87c2965d0e7dfda9c5e87e4fb590d1f4e",
-                "reference": "a9eb95c87c2965d0e7dfda9c5e87e4fb590d1f4e",
+                "url": "https://api.github.com/repos/symfony/dotenv/zipball/f17675595fd7527c57d11bd3d733eb5d41600128",
+                "reference": "f17675595fd7527c57d11bd3d733eb5d41600128",
                 "shasum": ""
             },
             "require": {
@@ -5576,20 +5813,20 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-07-05T09:39:30+00:00"
+            "time": "2020-09-02T16:08:58+00:00"
         },
         {
             "name": "symfony/error-handler",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/error-handler.git",
-                "reference": "2434fb32851f252e4f27691eee0b77c16198db62"
+                "reference": "c8be4a5c70af70fec82e762dd93e3bbcf95c035f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/error-handler/zipball/2434fb32851f252e4f27691eee0b77c16198db62",
-                "reference": "2434fb32851f252e4f27691eee0b77c16198db62",
+                "url": "https://api.github.com/repos/symfony/error-handler/zipball/c8be4a5c70af70fec82e762dd93e3bbcf95c035f",
+                "reference": "c8be4a5c70af70fec82e762dd93e3bbcf95c035f",
                 "shasum": ""
             },
             "require": {
@@ -5633,20 +5870,20 @@
             ],
             "description": "Symfony ErrorHandler Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-17T09:56:45+00:00"
+            "time": "2020-10-01T16:21:20+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "3e8ea5ccddd00556b86d69d42f99f1061a704030"
+                "reference": "e17bb5e0663dc725f7cdcafc932132735b4725cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/3e8ea5ccddd00556b86d69d42f99f1061a704030",
-                "reference": "3e8ea5ccddd00556b86d69d42f99f1061a704030",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/e17bb5e0663dc725f7cdcafc932132735b4725cd",
+                "reference": "e17bb5e0663dc725f7cdcafc932132735b4725cd",
                 "shasum": ""
             },
             "require": {
@@ -5664,6 +5901,7 @@
                 "psr/log": "~1.0",
                 "symfony/config": "^3.4|^4.0|^5.0",
                 "symfony/dependency-injection": "^3.4|^4.0|^5.0",
+                "symfony/error-handler": "~3.4|~4.4",
                 "symfony/expression-language": "^3.4|^4.0|^5.0",
                 "symfony/http-foundation": "^3.4|^4.0|^5.0",
                 "symfony/service-contracts": "^1.1|^2",
@@ -5703,7 +5941,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-13T14:18:44+00:00"
+            "time": "2020-09-18T14:07:46+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -5769,16 +6007,16 @@
         },
         {
             "name": "symfony/expression-language",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/expression-language.git",
-                "reference": "89f0e2c82d8c12975180f993383decbb810ad73e"
+                "reference": "54b118a1c91991b90e67919146db66093def1bf9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/expression-language/zipball/89f0e2c82d8c12975180f993383decbb810ad73e",
-                "reference": "89f0e2c82d8c12975180f993383decbb810ad73e",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/54b118a1c91991b90e67919146db66093def1bf9",
+                "reference": "54b118a1c91991b90e67919146db66093def1bf9",
                 "shasum": ""
             },
             "require": {
@@ -5816,20 +6054,20 @@
             ],
             "description": "Symfony ExpressionLanguage Component",
             "homepage": "https://symfony.com",
-            "time": "2020-05-20T08:37:50+00:00"
+            "time": "2020-09-02T16:08:58+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "27575bcbc68db1f6d06218891296572c9b845704"
+                "reference": "ebc51494739d3b081ea543ed7c462fa73a4f74db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/27575bcbc68db1f6d06218891296572c9b845704",
-                "reference": "27575bcbc68db1f6d06218891296572c9b845704",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/ebc51494739d3b081ea543ed7c462fa73a4f74db",
+                "reference": "ebc51494739d3b081ea543ed7c462fa73a4f74db",
                 "shasum": ""
             },
             "require": {
@@ -5866,20 +6104,20 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-21T17:19:37+00:00"
+            "time": "2020-09-27T13:54:16+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "2a78590b2c7e3de5c429628457c47541c58db9c7"
+                "reference": "60d08560f9aa72997c44077c40d47aa28a963230"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/2a78590b2c7e3de5c429628457c47541c58db9c7",
-                "reference": "2a78590b2c7e3de5c429628457c47541c58db9c7",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/60d08560f9aa72997c44077c40d47aa28a963230",
+                "reference": "60d08560f9aa72997c44077c40d47aa28a963230",
                 "shasum": ""
             },
             "require": {
@@ -5915,20 +6153,20 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-17T09:56:45+00:00"
+            "time": "2020-10-02T07:34:48+00:00"
         },
         {
             "name": "symfony/flex",
-            "version": "v1.9.4",
+            "version": "v1.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "115e67f76ba95d70946a6e0b15d4578bf04927c3"
+                "reference": "5c71110ad383ada3d5305c19ff8419a58f799c00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/115e67f76ba95d70946a6e0b15d4578bf04927c3",
-                "reference": "115e67f76ba95d70946a6e0b15d4578bf04927c3",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/5c71110ad383ada3d5305c19ff8419a58f799c00",
+                "reference": "5c71110ad383ada3d5305c19ff8419a58f799c00",
                 "shasum": ""
             },
             "require": {
@@ -5964,20 +6202,20 @@
                 }
             ],
             "description": "Composer plugin for Symfony",
-            "time": "2020-09-14T14:58:36+00:00"
+            "time": "2020-10-07T12:55:56+00:00"
         },
         {
             "name": "symfony/form",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "6407cd34ff3ff8354966c2e444b8a34d96e87ac8"
+                "reference": "54d9ec68b65440a4a5937bd6b76ac92214dcd210"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/6407cd34ff3ff8354966c2e444b8a34d96e87ac8",
-                "reference": "6407cd34ff3ff8354966c2e444b8a34d96e87ac8",
+                "url": "https://api.github.com/repos/symfony/form/zipball/54d9ec68b65440a4a5937bd6b76ac92214dcd210",
+                "reference": "54d9ec68b65440a4a5937bd6b76ac92214dcd210",
                 "shasum": ""
             },
             "require": {
@@ -6011,7 +6249,7 @@
                 "symfony/http-kernel": "^4.4",
                 "symfony/security-csrf": "^3.4|^4.0|^5.0",
                 "symfony/translation": "^4.2|^5.0",
-                "symfony/validator": "^3.4.31|^4.3.4|^5.0",
+                "symfony/validator": "^3.4.44|^4.3.4|^5.0",
                 "symfony/var-dumper": "^4.3|^5.0"
             },
             "suggest": {
@@ -6049,20 +6287,20 @@
             ],
             "description": "Symfony Form Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-18T11:39:55+00:00"
+            "time": "2020-10-02T12:43:11+00:00"
         },
         {
             "name": "symfony/framework-bundle",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/framework-bundle.git",
-                "reference": "19298dbd430ae443dadc6a16dbda9cb0ca317060"
+                "reference": "01c517f48814a1f599ce721814435f2dc548ce4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/19298dbd430ae443dadc6a16dbda9cb0ca317060",
-                "reference": "19298dbd430ae443dadc6a16dbda9cb0ca317060",
+                "url": "https://api.github.com/repos/symfony/framework-bundle/zipball/01c517f48814a1f599ce721814435f2dc548ce4c",
+                "reference": "01c517f48814a1f599ce721814435f2dc548ce4c",
                 "shasum": ""
             },
             "require": {
@@ -6180,20 +6418,81 @@
             ],
             "description": "Symfony FrameworkBundle",
             "homepage": "https://symfony.com",
-            "time": "2020-08-30T09:40:10+00:00"
+            "time": "2020-09-29T09:51:46+00:00"
         },
         {
-            "name": "symfony/http-foundation",
-            "version": "v4.4.13",
+            "name": "symfony/http-client-contracts",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "e3e5a62a6631a461954d471e7206e3750dbe8ee1"
+                "url": "https://github.com/symfony/http-client-contracts.git",
+                "reference": "3a5d0fe7908daaa23e3dbf4cee3ba4bfbb19fdd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/e3e5a62a6631a461954d471e7206e3750dbe8ee1",
-                "reference": "e3e5a62a6631a461954d471e7206e3750dbe8ee1",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/3a5d0fe7908daaa23e3dbf4cee3ba4bfbb19fdd3",
+                "reference": "3a5d0fe7908daaa23e3dbf4cee3ba4bfbb19fdd3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5"
+            },
+            "suggest": {
+                "symfony/http-client-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\HttpClient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to HTTP clients",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2020-09-07T11:33:47+00:00"
+        },
+        {
+            "name": "symfony/http-foundation",
+            "version": "v4.4.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-foundation.git",
+                "reference": "10683b407c3b6087c64619ebc97a87e36ea62c92"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/10683b407c3b6087c64619ebc97a87e36ea62c92",
+                "reference": "10683b407c3b6087c64619ebc97a87e36ea62c92",
                 "shasum": ""
             },
             "require": {
@@ -6235,20 +6534,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-17T07:39:58+00:00"
+            "time": "2020-09-27T14:14:06+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "2bb7b90ecdc79813c0bf237b7ff20e79062b5188"
+                "reference": "6544745997b06c7dcecf0d4a70f09e5de1db7ca8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/2bb7b90ecdc79813c0bf237b7ff20e79062b5188",
-                "reference": "2bb7b90ecdc79813c0bf237b7ff20e79062b5188",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/6544745997b06c7dcecf0d4a70f09e5de1db7ca8",
+                "reference": "6544745997b06c7dcecf0d4a70f09e5de1db7ca8",
                 "shasum": ""
             },
             "require": {
@@ -6256,6 +6555,7 @@
                 "psr/log": "~1.0",
                 "symfony/error-handler": "^4.4",
                 "symfony/event-dispatcher": "^4.4",
+                "symfony/http-client-contracts": "^1.1|^2",
                 "symfony/http-foundation": "^4.4|^5.0",
                 "symfony/polyfill-ctype": "^1.8",
                 "symfony/polyfill-php73": "^1.9",
@@ -6326,11 +6626,11 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2020-09-02T08:09:29+00:00"
+            "time": "2020-10-04T07:48:13+00:00"
         },
         {
             "name": "symfony/inflector",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/inflector.git",
@@ -6388,16 +6688,16 @@
         },
         {
             "name": "symfony/intl",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
-                "reference": "18e708f12e3d3b64a35761ab191de6302b7de4f6"
+                "reference": "0da1f7f08072ddb9185b02ce30ce098fa61f4042"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/intl/zipball/18e708f12e3d3b64a35761ab191de6302b7de4f6",
-                "reference": "18e708f12e3d3b64a35761ab191de6302b7de4f6",
+                "url": "https://api.github.com/repos/symfony/intl/zipball/0da1f7f08072ddb9185b02ce30ce098fa61f4042",
+                "reference": "0da1f7f08072ddb9185b02ce30ce098fa61f4042",
                 "shasum": ""
             },
             "require": {
@@ -6459,7 +6759,75 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2020-08-17T07:31:35+00:00"
+            "time": "2020-09-27T03:36:23+00:00"
+        },
+        {
+            "name": "symfony/mailer",
+            "version": "v4.4.15",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/mailer.git",
+                "reference": "c1018952b49058802c2aa1ea831935e996b7f5d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/mailer/zipball/c1018952b49058802c2aa1ea831935e996b7f5d3",
+                "reference": "c1018952b49058802c2aa1ea831935e996b7f5d3",
+                "shasum": ""
+            },
+            "require": {
+                "egulias/email-validator": "^2.1.10",
+                "php": ">=7.1.3",
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "^4.3",
+                "symfony/mime": "^4.4|^5.0",
+                "symfony/service-contracts": "^1.1|^2"
+            },
+            "conflict": {
+                "symfony/http-kernel": "<4.4",
+                "symfony/sendgrid-mailer": "<4.4"
+            },
+            "require-dev": {
+                "symfony/amazon-mailer": "^4.4|^5.0",
+                "symfony/google-mailer": "^4.4|^5.0",
+                "symfony/http-client-contracts": "^1.1|^2",
+                "symfony/mailchimp-mailer": "^4.4|^5.0",
+                "symfony/mailgun-mailer": "^4.4|^5.0",
+                "symfony/messenger": "^4.4|^5.0",
+                "symfony/postmark-mailer": "^4.4|^5.0",
+                "symfony/sendgrid-mailer": "^4.4|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Mailer\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Mailer Component",
+            "homepage": "https://symfony.com",
+            "time": "2020-09-06T17:12:23+00:00"
         },
         {
             "name": "symfony/messenger",
@@ -6538,16 +6906,16 @@
         },
         {
             "name": "symfony/mime",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "50ad671306d3d3ffb888d95b4fb1859496831e3a"
+                "reference": "42df2507eb8e6cd9795f51c99dd52bab543a918f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/50ad671306d3d3ffb888d95b4fb1859496831e3a",
-                "reference": "50ad671306d3d3ffb888d95b4fb1859496831e3a",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/42df2507eb8e6cd9795f51c99dd52bab543a918f",
+                "reference": "42df2507eb8e6cd9795f51c99dd52bab543a918f",
                 "shasum": ""
             },
             "require": {
@@ -6596,20 +6964,20 @@
                 "mime",
                 "mime-type"
             ],
-            "time": "2020-08-17T09:56:45+00:00"
+            "time": "2020-09-02T16:08:58+00:00"
         },
         {
             "name": "symfony/monolog-bridge",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bridge.git",
-                "reference": "abcfb15cfc809e449b24a7094aab1d63f4828029"
+                "reference": "267085e15c00ea5e8059dbf1cd7ba8f5f7541221"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bridge/zipball/abcfb15cfc809e449b24a7094aab1d63f4828029",
-                "reference": "abcfb15cfc809e449b24a7094aab1d63f4828029",
+                "url": "https://api.github.com/repos/symfony/monolog-bridge/zipball/267085e15c00ea5e8059dbf1cd7ba8f5f7541221",
+                "reference": "267085e15c00ea5e8059dbf1cd7ba8f5f7541221",
                 "shasum": ""
             },
             "require": {
@@ -6663,20 +7031,20 @@
             ],
             "description": "Symfony Monolog Bridge",
             "homepage": "https://symfony.com",
-            "time": "2020-08-17T07:39:58+00:00"
+            "time": "2020-10-02T07:34:48+00:00"
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v3.5.0",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "dd80460fcfe1fa2050a7103ad818e9d0686ce6fd"
+                "reference": "e495f5c7e4e672ffef4357d4a4d85f010802f940"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/dd80460fcfe1fa2050a7103ad818e9d0686ce6fd",
-                "reference": "dd80460fcfe1fa2050a7103ad818e9d0686ce6fd",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/e495f5c7e4e672ffef4357d4a4d85f010802f940",
+                "reference": "e495f5c7e4e672ffef4357d4a4d85f010802f940",
                 "shasum": ""
             },
             "require": {
@@ -6689,7 +7057,7 @@
             },
             "require-dev": {
                 "symfony/console": "~3.4 || ~4.0 || ^5.0",
-                "symfony/phpunit-bridge": "^3.4.19 || ^4.0 || ^5.0",
+                "symfony/phpunit-bridge": "^4.4 || ^5.0",
                 "symfony/yaml": "~3.4 || ~4.0 || ^5.0"
             },
             "type": "symfony-bundle",
@@ -6726,20 +7094,20 @@
                 "log",
                 "logging"
             ],
-            "time": "2019-11-13T13:11:14+00:00"
+            "time": "2020-10-06T15:12:11+00:00"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "376bd3a02e7946dbf90b01563361b47dde425025"
+                "reference": "02b120a79ff06b779819f1594a300226bfc75105"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/376bd3a02e7946dbf90b01563361b47dde425025",
-                "reference": "376bd3a02e7946dbf90b01563361b47dde425025",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/02b120a79ff06b779819f1594a300226bfc75105",
+                "reference": "02b120a79ff06b779819f1594a300226bfc75105",
                 "shasum": ""
             },
             "require": {
@@ -6780,7 +7148,7 @@
                 "configuration",
                 "options"
             ],
-            "time": "2020-07-10T09:12:14+00:00"
+            "time": "2020-09-24T16:40:22+00:00"
         },
         {
             "name": "symfony/orm-pack",
@@ -7326,16 +7694,16 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
-                "reference": "71039619d0d5b9529f984e7c18e5d6c4e965825b"
+                "reference": "ecc35239f0f665fd7a8e3a2ecaad7e4ee2668ab6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-access/zipball/71039619d0d5b9529f984e7c18e5d6c4e965825b",
-                "reference": "71039619d0d5b9529f984e7c18e5d6c4e965825b",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/ecc35239f0f665fd7a8e3a2ecaad7e4ee2668ab6",
+                "reference": "ecc35239f0f665fd7a8e3a2ecaad7e4ee2668ab6",
                 "shasum": ""
             },
             "require": {
@@ -7389,20 +7757,20 @@
                 "property path",
                 "reflection"
             ],
-            "time": "2020-08-13T14:18:44+00:00"
+            "time": "2020-09-02T16:08:58+00:00"
         },
         {
             "name": "symfony/property-info",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-info.git",
-                "reference": "8205052790eea648f60f2f04a214537425fc900b"
+                "reference": "387c5823e37f14271a499d1b9844c2009cb79d44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-info/zipball/8205052790eea648f60f2f04a214537425fc900b",
-                "reference": "8205052790eea648f60f2f04a214537425fc900b",
+                "url": "https://api.github.com/repos/symfony/property-info/zipball/387c5823e37f14271a499d1b9844c2009cb79d44",
+                "reference": "387c5823e37f14271a499d1b9844c2009cb79d44",
                 "shasum": ""
             },
             "require": {
@@ -7465,20 +7833,20 @@
                 "type",
                 "validator"
             ],
-            "time": "2020-08-28T08:21:30+00:00"
+            "time": "2020-09-03T00:26:19+00:00"
         },
         {
             "name": "symfony/routing",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "e3387963565da9bae51d1d3ab8041646cc93bd04"
+                "reference": "006b2d06672b8650998f328fc603eb6f3feb979f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/e3387963565da9bae51d1d3ab8041646cc93bd04",
-                "reference": "e3387963565da9bae51d1d3ab8041646cc93bd04",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/006b2d06672b8650998f328fc603eb6f3feb979f",
+                "reference": "006b2d06672b8650998f328fc603eb6f3feb979f",
                 "shasum": ""
             },
             "require": {
@@ -7541,7 +7909,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2020-08-10T07:27:51+00:00"
+            "time": "2020-10-01T16:25:17+00:00"
         },
         {
             "name": "symfony/security",
@@ -7631,16 +7999,16 @@
         },
         {
             "name": "symfony/security-bundle",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-bundle.git",
-                "reference": "ad026271cc5d1b2f57e8f5fbe9f3acc75bd2181e"
+                "reference": "274b0eb10dfc9067175cb4d1bcc68f8b37ebee14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/ad026271cc5d1b2f57e8f5fbe9f3acc75bd2181e",
-                "reference": "ad026271cc5d1b2f57e8f5fbe9f3acc75bd2181e",
+                "url": "https://api.github.com/repos/symfony/security-bundle/zipball/274b0eb10dfc9067175cb4d1bcc68f8b37ebee14",
+                "reference": "274b0eb10dfc9067175cb4d1bcc68f8b37ebee14",
                 "shasum": ""
             },
             "require": {
@@ -7710,20 +8078,20 @@
             ],
             "description": "Symfony SecurityBundle",
             "homepage": "https://symfony.com",
-            "time": "2020-08-18T08:04:43+00:00"
+            "time": "2020-09-02T16:08:58+00:00"
         },
         {
             "name": "symfony/serializer",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "f8e1211fdd045d22bba98054fd7969bec955810a"
+                "reference": "8e97a9cfc5a48de83437f286d6d0ab4a2a2c22b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/f8e1211fdd045d22bba98054fd7969bec955810a",
-                "reference": "f8e1211fdd045d22bba98054fd7969bec955810a",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/8e97a9cfc5a48de83437f286d6d0ab4a2a2c22b0",
+                "reference": "8e97a9cfc5a48de83437f286d6d0ab4a2a2c22b0",
                 "shasum": ""
             },
             "require": {
@@ -7792,7 +8160,7 @@
             ],
             "description": "Symfony Serializer Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-31T16:04:23+00:00"
+            "time": "2020-10-02T20:12:42+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -7858,16 +8226,16 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "f51fb90df1154a7f75987198a9689e28f91e6a50"
+                "reference": "6f89e19772cf61b3c65bab329fe0e318259fbd91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/f51fb90df1154a7f75987198a9689e28f91e6a50",
-                "reference": "f51fb90df1154a7f75987198a9689e28f91e6a50",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/6f89e19772cf61b3c65bab329fe0e318259fbd91",
+                "reference": "6f89e19772cf61b3c65bab329fe0e318259fbd91",
                 "shasum": ""
             },
             "require": {
@@ -7904,7 +8272,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2020-05-20T08:37:50+00:00"
+            "time": "2020-09-02T16:08:58+00:00"
         },
         {
             "name": "symfony/string",
@@ -7979,16 +8347,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "700e6e50174b0cdcf0fa232773bec5c314680575"
+                "reference": "8494fa1bbf9d77fe1e7d50ac8ccfb80a858a98bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/700e6e50174b0cdcf0fa232773bec5c314680575",
-                "reference": "700e6e50174b0cdcf0fa232773bec5c314680575",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/8494fa1bbf9d77fe1e7d50ac8ccfb80a858a98bd",
+                "reference": "8494fa1bbf9d77fe1e7d50ac8ccfb80a858a98bd",
                 "shasum": ""
             },
             "require": {
@@ -8051,7 +8419,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-17T09:56:45+00:00"
+            "time": "2020-10-02T07:34:48+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -8116,16 +8484,16 @@
         },
         {
             "name": "symfony/twig-bridge",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/twig-bridge.git",
-                "reference": "448aefe8183078330f7e5021032ff6c6410851c9"
+                "reference": "ac5de06ef28f0638bd87d8fcf515715232db34d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/twig-bridge/zipball/448aefe8183078330f7e5021032ff6c6410851c9",
-                "reference": "448aefe8183078330f7e5021032ff6c6410851c9",
+                "url": "https://api.github.com/repos/symfony/twig-bridge/zipball/ac5de06ef28f0638bd87d8fcf515715232db34d2",
+                "reference": "ac5de06ef28f0638bd87d8fcf515715232db34d2",
                 "shasum": ""
             },
             "require": {
@@ -8215,20 +8583,20 @@
             ],
             "description": "Symfony Twig Bridge",
             "homepage": "https://symfony.com",
-            "time": "2020-08-17T09:35:39+00:00"
+            "time": "2020-09-02T16:08:58+00:00"
         },
         {
             "name": "symfony/twig-bundle",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/twig-bundle.git",
-                "reference": "c83e606bdc54504a1b2bcd8807b5dd139187b4a4"
+                "reference": "19369cd319700a925c1a736f3059894aab04c387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/twig-bundle/zipball/c83e606bdc54504a1b2bcd8807b5dd139187b4a4",
-                "reference": "c83e606bdc54504a1b2bcd8807b5dd139187b4a4",
+                "url": "https://api.github.com/repos/symfony/twig-bundle/zipball/19369cd319700a925c1a736f3059894aab04c387",
+                "reference": "19369cd319700a925c1a736f3059894aab04c387",
                 "shasum": ""
             },
             "require": {
@@ -8290,7 +8658,7 @@
             ],
             "description": "Symfony TwigBundle",
             "homepage": "https://symfony.com",
-            "time": "2020-05-20T08:37:50+00:00"
+            "time": "2020-10-01T13:17:48+00:00"
         },
         {
             "name": "symfony/validator",
@@ -8387,16 +8755,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "1bef32329f3166486ab7cb88599cae4875632b99"
+                "reference": "0dc22bdf9d1197467bb04d505355180b6f20bcca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/1bef32329f3166486ab7cb88599cae4875632b99",
-                "reference": "1bef32329f3166486ab7cb88599cae4875632b99",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/0dc22bdf9d1197467bb04d505355180b6f20bcca",
+                "reference": "0dc22bdf9d1197467bb04d505355180b6f20bcca",
                 "shasum": ""
             },
             "require": {
@@ -8460,20 +8828,20 @@
                 "debug",
                 "dump"
             ],
-            "time": "2020-08-17T07:31:35+00:00"
+            "time": "2020-09-18T08:35:10+00:00"
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "09f0aec4b8bfc25c1dd306e6203cf055c9886560"
+                "reference": "bb6c505d1492bf55534184c0a38826bda529e5e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/09f0aec4b8bfc25c1dd306e6203cf055c9886560",
-                "reference": "09f0aec4b8bfc25c1dd306e6203cf055c9886560",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/bb6c505d1492bf55534184c0a38826bda529e5e2",
+                "reference": "bb6c505d1492bf55534184c0a38826bda529e5e2",
                 "shasum": ""
             },
             "require": {
@@ -8520,20 +8888,20 @@
                 "instantiate",
                 "serialize"
             ],
-            "time": "2020-07-05T09:39:30+00:00"
+            "time": "2020-09-07T21:10:21+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.4.13",
+            "version": "v4.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "e2a69525b11a33be51cb00b8d6d13a9258a296b1"
+                "reference": "c7885964b1eceb70b0981556d0a9b01d2d97c8d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/e2a69525b11a33be51cb00b8d6d13a9258a296b1",
-                "reference": "e2a69525b11a33be51cb00b8d6d13a9258a296b1",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/c7885964b1eceb70b0981556d0a9b01d2d97c8d1",
+                "reference": "c7885964b1eceb70b0981556d0a9b01d2d97c8d1",
                 "shasum": ""
             },
             "require": {
@@ -8579,7 +8947,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2020-08-26T08:30:46+00:00"
+            "time": "2020-09-27T03:36:23+00:00"
         },
         {
             "name": "twig/twig",
@@ -8903,944 +9271,7 @@
             "time": "2020-05-10T13:42:24+00:00"
         }
     ],
-    "packages-dev": [
-        {
-            "name": "behat/behat",
-            "version": "v3.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Behat/Behat.git",
-                "reference": "08052f739619a9e9f62f457a67302f0715e6dd13"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/08052f739619a9e9f62f457a67302f0715e6dd13",
-                "reference": "08052f739619a9e9f62f457a67302f0715e6dd13",
-                "shasum": ""
-            },
-            "require": {
-                "behat/gherkin": "^4.6.0",
-                "behat/transliterator": "^1.2",
-                "ext-mbstring": "*",
-                "php": ">=5.3.3",
-                "psr/container": "^1.0",
-                "symfony/config": "^2.7.51 || ^3.0 || ^4.0 || ^5.0",
-                "symfony/console": "^2.7.51 || ^2.8.33 || ^3.3.15 || ^3.4.3 || ^4.0.3 || ^5.0",
-                "symfony/dependency-injection": "^2.7.51 || ^3.0 || ^4.0 || ^5.0",
-                "symfony/event-dispatcher": "^2.7.51 || ^3.0 || ^4.0 || ^5.0",
-                "symfony/translation": "^2.7.51 || ^3.0 || ^4.0 || ^5.0",
-                "symfony/yaml": "^2.7.51 || ^3.0 || ^4.0 || ^5.0"
-            },
-            "require-dev": {
-                "container-interop/container-interop": "^1.2",
-                "herrera-io/box": "~1.6.1",
-                "phpunit/phpunit": "^4.8.36 || ^6.5.14 || ^7.5.20",
-                "symfony/process": "~2.5 || ^3.0 || ^4.0 || ^5.0"
-            },
-            "suggest": {
-                "ext-dom": "Needed to output test results in JUnit format."
-            },
-            "bin": [
-                "bin/behat"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.6.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behat\\Behat\\": "src/Behat/Behat/",
-                    "Behat\\Testwork\\": "src/Behat/Testwork/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Scenario-oriented BDD framework for PHP 5.3",
-            "homepage": "http://behat.org/",
-            "keywords": [
-                "Agile",
-                "BDD",
-                "ScenarioBDD",
-                "Scrum",
-                "StoryBDD",
-                "User story",
-                "business",
-                "development",
-                "documentation",
-                "examples",
-                "symfony",
-                "testing"
-            ],
-            "time": "2020-06-03T13:08:44+00:00"
-        },
-        {
-            "name": "behat/gherkin",
-            "version": "v4.6.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Behat/Gherkin.git",
-                "reference": "51ac4500c4dc30cbaaabcd2f25694299df666a31"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/51ac4500c4dc30cbaaabcd2f25694299df666a31",
-                "reference": "51ac4500c4dc30cbaaabcd2f25694299df666a31",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.5|~5",
-                "symfony/phpunit-bridge": "~2.7|~3|~4",
-                "symfony/yaml": "~2.3|~3|~4"
-            },
-            "suggest": {
-                "symfony/yaml": "If you want to parse features, represented in YAML files"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Behat\\Gherkin": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Gherkin DSL parser for PHP 5.3",
-            "homepage": "http://behat.org/",
-            "keywords": [
-                "BDD",
-                "Behat",
-                "Cucumber",
-                "DSL",
-                "gherkin",
-                "parser"
-            ],
-            "time": "2020-03-17T14:03:26+00:00"
-        },
-        {
-            "name": "behat/mink",
-            "version": "v1.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/minkphp/Mink.git",
-                "reference": "07c6a9fe3fa98c2de074b25d9ed26c22904e3887"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/Mink/zipball/07c6a9fe3fa98c2de074b25d9ed26c22904e3887",
-                "reference": "07c6a9fe3fa98c2de074b25d9ed26c22904e3887",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.1",
-                "symfony/css-selector": "^2.7|^3.0|^4.0|^5.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20",
-                "symfony/debug": "^2.7|^3.0|^4.0",
-                "symfony/phpunit-bridge": "^3.4.38 || ^5.0.5"
-            },
-            "suggest": {
-                "behat/mink-browserkit-driver": "extremely fast headless driver for Symfony\\Kernel-based apps (Sf2, Silex)",
-                "behat/mink-goutte-driver": "fast headless driver for any app without JS emulation",
-                "behat/mink-selenium2-driver": "slow, but JS-enabled driver for any app (requires Selenium2)",
-                "behat/mink-zombie-driver": "fast and JS-enabled headless driver for any app (requires node.js)",
-                "dmore/chrome-mink-driver": "fast and JS-enabled driver for any app (requires chromium or google chrome)"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.8.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behat\\Mink\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Browser controller/emulator abstraction for PHP",
-            "homepage": "http://mink.behat.org/",
-            "keywords": [
-                "browser",
-                "testing",
-                "web"
-            ],
-            "time": "2020-03-11T15:45:53+00:00"
-        },
-        {
-            "name": "behat/mink-browserkit-driver",
-            "version": "v1.3.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/minkphp/MinkBrowserKitDriver.git",
-                "reference": "e3b90840022ebcd544c7b394a3c9597ae242cbee"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkBrowserKitDriver/zipball/e3b90840022ebcd544c7b394a3c9597ae242cbee",
-                "reference": "e3b90840022ebcd544c7b394a3c9597ae242cbee",
-                "shasum": ""
-            },
-            "require": {
-                "behat/mink": "^1.7.1@dev",
-                "php": ">=5.3.6",
-                "symfony/browser-kit": "~2.3|~3.0|~4.0",
-                "symfony/dom-crawler": "~2.3|~3.0|~4.0"
-            },
-            "require-dev": {
-                "mink/driver-testsuite": "dev-master",
-                "symfony/debug": "^2.7|^3.0|^4.0",
-                "symfony/http-kernel": "~2.3|~3.0|~4.0"
-            },
-            "type": "mink-driver",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behat\\Mink\\Driver\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com",
-                    "homepage": "http://everzet.com"
-                }
-            ],
-            "description": "Symfony2 BrowserKit driver for Mink framework",
-            "homepage": "http://mink.behat.org/",
-            "keywords": [
-                "Mink",
-                "Symfony2",
-                "browser",
-                "testing"
-            ],
-            "time": "2020-03-11T09:49:45+00:00"
-        },
-        {
-            "name": "behat/symfony2-extension",
-            "version": "2.1.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Behat/Symfony2Extension.git",
-                "reference": "d7c834487426a784665f9c1e61132274dbf2ea26"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Symfony2Extension/zipball/d7c834487426a784665f9c1e61132274dbf2ea26",
-                "reference": "d7c834487426a784665f9c1e61132274dbf2ea26",
-                "shasum": ""
-            },
-            "require": {
-                "behat/behat": "^3.4.3",
-                "php": ">=5.3.3",
-                "symfony/framework-bundle": "~2.0|~3.0|~4.0"
-            },
-            "require-dev": {
-                "behat/mink": "~1.7@dev",
-                "behat/mink-browserkit-driver": "~1.3@dev",
-                "behat/mink-extension": "~2.0",
-                "phpspec/phpspec": "~2.0|~3.0|~4.0",
-                "phpunit/phpunit": "~4.0|~5.0",
-                "symfony/symfony": "~2.1|~3.0|~4.0"
-            },
-            "type": "behat-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Behat\\Symfony2Extension": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                },
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com"
-                }
-            ],
-            "description": "Symfony2 framework extension for Behat",
-            "homepage": "http://behat.org",
-            "keywords": [
-                "BDD",
-                "framework",
-                "symfony"
-            ],
-            "time": "2018-04-20T15:48:23+00:00"
-        },
-        {
-            "name": "behat/transliterator",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Behat/Transliterator.git",
-                "reference": "3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Transliterator/zipball/3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc",
-                "reference": "3c4ec1d77c3d05caa1f0bf8fb3aae4845005c7fc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "chuyskywalker/rolling-curl": "^3.1",
-                "php-yaoi/php-yaoi": "^1.0",
-                "phpunit/phpunit": "^4.8.36|^6.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behat\\Transliterator\\": "src/Behat/Transliterator"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Artistic-1.0"
-            ],
-            "description": "String transliterator",
-            "keywords": [
-                "i18n",
-                "slug",
-                "transliterator"
-            ],
-            "time": "2020-01-14T16:39:13+00:00"
-        },
-        {
-            "name": "behatch/contexts",
-            "version": "3.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Behatch/contexts.git",
-                "reference": "e45284b1dddb9dce78e186a56683527802bccd47"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Behatch/contexts/zipball/e45284b1dddb9dce78e186a56683527802bccd47",
-                "reference": "e45284b1dddb9dce78e186a56683527802bccd47",
-                "shasum": ""
-            },
-            "require": {
-                "behat/behat": "^3.0.13",
-                "friends-of-behat/mink-extension": "^2.3.1",
-                "justinrainbow/json-schema": "^5.0",
-                "php": ">=5.5",
-                "symfony/dom-crawler": "^2.4|^3.0|^4.0|^5.0",
-                "symfony/http-foundation": "^2.3|^3.0|^4.0|^5.0",
-                "symfony/property-access": "^2.3|^3.0|^4.0|^5.0"
-            },
-            "replace": {
-                "sanpi/behatch-contexts": "self.version"
-            },
-            "require-dev": {
-                "atoum/atoum": "^2.8|^3.0",
-                "behat/mink-goutte-driver": "^1.1",
-                "behat/mink-selenium2-driver": "^1.4@dev",
-                "fabpot/goutte": "^3.2",
-                "guzzlehttp/guzzle": "^6.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Behatch\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "beerware"
-            ],
-            "description": "Behatch contexts",
-            "keywords": [
-                "BDD",
-                "Behat",
-                "Context",
-                "Symfony2"
-            ],
-            "time": "2020-02-27T08:40:50+00:00"
-        },
-        {
-            "name": "friends-of-behat/mink-extension",
-            "version": "v2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfBehat/MinkExtension.git",
-                "reference": "ca8796a20f2b39ea275860d1cee7b863447dfe06"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfBehat/MinkExtension/zipball/ca8796a20f2b39ea275860d1cee7b863447dfe06",
-                "reference": "ca8796a20f2b39ea275860d1cee7b863447dfe06",
-                "shasum": ""
-            },
-            "require": {
-                "behat/behat": "^3.0.5",
-                "behat/mink": "^1.5",
-                "php": "^7.2",
-                "symfony/config": "^4.4|^5.0"
-            },
-            "replace": {
-                "behat/mink-extension": "self.version"
-            },
-            "require-dev": {
-                "behat/mink-goutte-driver": "^1.1",
-                "phpspec/phpspec": "^6.0"
-            },
-            "type": "behat-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Behat\\MinkExtension": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Konstantin Kudryashov",
-                    "email": "ever.zet@gmail.com"
-                },
-                {
-                    "name": "Christophe Coevoet",
-                    "email": "stof@notk.org"
-                }
-            ],
-            "description": "Mink extension for Behat",
-            "homepage": "http://extensions.behat.org/mink",
-            "keywords": [
-                "browser",
-                "gui",
-                "test",
-                "web"
-            ],
-            "time": "2020-01-15T17:16:57+00:00"
-        },
-        {
-            "name": "friends-of-behat/symfony-extension",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfBehat/SymfonyExtension.git",
-                "reference": "0f906e1156546095f4287be7cd5ceede2d3e22cc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfBehat/SymfonyExtension/zipball/0f906e1156546095f4287be7cd5ceede2d3e22cc",
-                "reference": "0f906e1156546095f4287be7cd5ceede2d3e22cc",
-                "shasum": ""
-            },
-            "require": {
-                "behat/behat": "^3.6.1",
-                "php": "^7.1",
-                "symfony/dependency-injection": "^4.4|^5.0",
-                "symfony/http-kernel": "^4.4|^5.0",
-                "symfony/proxy-manager-bridge": "^4.4|^5.0"
-            },
-            "require-dev": {
-                "behat/mink-selenium2-driver": "^1.3",
-                "friends-of-behat/mink": "^1.7",
-                "friends-of-behat/mink-browserkit-driver": "^1.3",
-                "friends-of-behat/mink-extension": "^2.2",
-                "friends-of-behat/page-object-extension": "^0.3.1",
-                "friends-of-behat/service-container-extension": "^1.0",
-                "sylius-labs/coding-standard": "^3.0",
-                "symfony/browser-kit": "^4.4|^5.0",
-                "symfony/framework-bundle": "^4.4|^5.0",
-                "symfony/process": "^4.4|^5.0",
-                "symfony/yaml": "^4.4|^5.0",
-                "vimeo/psalm": "3.10.1"
-            },
-            "suggest": {
-                "friends-of-behat/mink": "^1.7",
-                "friends-of-behat/mink-browserkit-driver": "^1.3",
-                "friends-of-behat/mink-extension": "^2.2"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FriendsOfBehat\\SymfonyExtension\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kamil Kokot",
-                    "email": "kamil@kokot.me",
-                    "homepage": "https://kamilkokot.com"
-                }
-            ],
-            "description": "Integrates Behat with Symfony.",
-            "time": "2020-04-04T20:07:00+00:00"
-        },
-        {
-            "name": "justinrainbow/json-schema",
-            "version": "5.2.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
-                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "~2.2.20||~2.15.1",
-                "json-schema/json-schema-test-suite": "1.2.0",
-                "phpunit/phpunit": "^4.8.35"
-            },
-            "bin": [
-                "bin/validate-json"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "JsonSchema\\": "src/JsonSchema/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Bruno Prieto Reis",
-                    "email": "bruno.p.reis@gmail.com"
-                },
-                {
-                    "name": "Justin Rainbow",
-                    "email": "justin.rainbow@gmail.com"
-                },
-                {
-                    "name": "Igor Wiedler",
-                    "email": "igor@wiedler.ch"
-                },
-                {
-                    "name": "Robert Schönthal",
-                    "email": "seroscho@googlemail.com"
-                }
-            ],
-            "description": "A library to validate a json schema.",
-            "homepage": "https://github.com/justinrainbow/json-schema",
-            "keywords": [
-                "json",
-                "schema"
-            ],
-            "time": "2020-05-27T16:41:55+00:00"
-        },
-        {
-            "name": "phing/phing",
-            "version": "2.16.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phingofficial/phing.git",
-                "reference": "b34c2bf9cd6abd39b4287dee31e68673784c8567"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phingofficial/phing/zipball/b34c2bf9cd6abd39b4287dee31e68673784c8567",
-                "reference": "b34c2bf9cd6abd39b4287dee31e68673784c8567",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "require-dev": {
-                "ext-pdo_sqlite": "*",
-                "mikey179/vfsstream": "^1.6",
-                "pdepend/pdepend": "2.x",
-                "pear/archive_tar": "1.4.x",
-                "pear/http_request2": "dev-trunk",
-                "pear/net_growl": "dev-trunk",
-                "pear/pear-core-minimal": "1.10.1",
-                "pear/versioncontrol_git": "@dev",
-                "pear/versioncontrol_svn": "~0.5",
-                "phpdocumentor/phpdocumentor": "2.x",
-                "phploc/phploc": "~2.0.6",
-                "phpmd/phpmd": "~2.2",
-                "phpunit/phpunit": ">=3.7",
-                "sebastian/git": "~1.0",
-                "sebastian/phpcpd": "2.x",
-                "siad007/versioncontrol_hg": "^1.0",
-                "simpletest/simpletest": "^1.1",
-                "squizlabs/php_codesniffer": "~2.2",
-                "symfony/yaml": "^2.8 || ^3.1 || ^4.0"
-            },
-            "suggest": {
-                "pdepend/pdepend": "PHP version of JDepend",
-                "pear/archive_tar": "Tar file management class",
-                "pear/versioncontrol_git": "A library that provides OO interface to handle Git repository",
-                "pear/versioncontrol_svn": "A simple OO-style interface for Subversion, the free/open-source version control system",
-                "phpdocumentor/phpdocumentor": "Documentation Generator for PHP",
-                "phploc/phploc": "A tool for quickly measuring the size of a PHP project",
-                "phpmd/phpmd": "PHP version of PMD tool",
-                "phpunit/php-code-coverage": "Library that provides collection, processing, and rendering functionality for PHP code coverage information",
-                "phpunit/phpunit": "The PHP Unit Testing Framework",
-                "sebastian/phpcpd": "Copy/Paste Detector (CPD) for PHP code",
-                "siad007/versioncontrol_hg": "A library for interfacing with Mercurial repositories.",
-                "tedivm/jshrink": "Javascript Minifier built in PHP"
-            },
-            "bin": [
-                "bin/phing"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.16.x-dev"
-                }
-            },
-            "autoload": {
-                "classmap": [
-                    "classes/phing/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                "classes"
-            ],
-            "license": [
-                "LGPL-3.0-only"
-            ],
-            "authors": [
-                {
-                    "name": "Michiel Rook",
-                    "email": "mrook@php.net"
-                },
-                {
-                    "name": "Phing Community",
-                    "homepage": "https://www.phing.info/trac/wiki/Development/Contributors"
-                }
-            ],
-            "description": "PHing Is Not GNU make; it's a PHP project build system or build tool based on Apache Ant.",
-            "homepage": "https://www.phing.info/",
-            "keywords": [
-                "build",
-                "phing",
-                "task",
-                "tool"
-            ],
-            "time": "2020-02-03T18:50:54+00:00"
-        },
-        {
-            "name": "symfony/browser-kit",
-            "version": "v4.4.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/browser-kit.git",
-                "reference": "f53310646af9901292488b2ff36e26ea10f545f5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/f53310646af9901292488b2ff36e26ea10f545f5",
-                "reference": "f53310646af9901292488b2ff36e26ea10f545f5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.3",
-                "symfony/dom-crawler": "^3.4|^4.0|^5.0"
-            },
-            "require-dev": {
-                "symfony/css-selector": "^3.4|^4.0|^5.0",
-                "symfony/http-client": "^4.3|^5.0",
-                "symfony/mime": "^4.3|^5.0",
-                "symfony/process": "^3.4|^4.0|^5.0"
-            },
-            "suggest": {
-                "symfony/process": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\BrowserKit\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony BrowserKit Component",
-            "homepage": "https://symfony.com",
-            "time": "2020-05-22T17:28:00+00:00"
-        },
-        {
-            "name": "symfony/css-selector",
-            "version": "v4.4.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/css-selector.git",
-                "reference": "bf17dc9f6ce144e41f786c32435feea4d8e11dcc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/bf17dc9f6ce144e41f786c32435feea4d8e11dcc",
-                "reference": "bf17dc9f6ce144e41f786c32435feea4d8e11dcc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\CssSelector\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Jean-François Simon",
-                    "email": "jeanfrancois.simon@sensiolabs.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony CssSelector Component",
-            "homepage": "https://symfony.com",
-            "time": "2020-07-05T09:39:30+00:00"
-        },
-        {
-            "name": "symfony/dom-crawler",
-            "version": "v4.4.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "6dd1e7adef4b7efeeb9691fd619279027d4dcf85"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/6dd1e7adef4b7efeeb9691fd619279027d4dcf85",
-                "reference": "6dd1e7adef4b7efeeb9691fd619279027d4dcf85",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.3",
-                "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "conflict": {
-                "masterminds/html5": "<2.6"
-            },
-            "require-dev": {
-                "masterminds/html5": "^2.6",
-                "symfony/css-selector": "^3.4|^4.0|^5.0"
-            },
-            "suggest": {
-                "symfony/css-selector": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\DomCrawler\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony DomCrawler Component",
-            "homepage": "https://symfony.com",
-            "time": "2020-08-12T06:20:35+00:00"
-        },
-        {
-            "name": "symfony/proxy-manager-bridge",
-            "version": "v4.4.13",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/proxy-manager-bridge.git",
-                "reference": "31cae9d66291947f940ca7a40511c493939e2799"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/proxy-manager-bridge/zipball/31cae9d66291947f940ca7a40511c493939e2799",
-                "reference": "31cae9d66291947f940ca7a40511c493939e2799",
-                "shasum": ""
-            },
-            "require": {
-                "ocramius/proxy-manager": "~2.1",
-                "php": ">=7.1.3",
-                "symfony/dependency-injection": "^4.0|^5.0"
-            },
-            "conflict": {
-                "zendframework/zend-eventmanager": "2.6.0"
-            },
-            "require-dev": {
-                "symfony/config": "^3.4|^4.0|^5.0"
-            },
-            "type": "symfony-bridge",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bridge\\ProxyManager\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony ProxyManager Bridge",
-            "homepage": "https://symfony.com",
-            "time": "2020-08-17T07:39:58+00:00"
-        }
-    ],
+    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],

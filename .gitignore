@@ -1,4 +1,3 @@
-
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
@@ -8,18 +7,10 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-/import
-/tmp
-.history
-.idea
-.vscode
-/build
-/phpunit.xml
-/behat.yml
-/.phpcs-cache
-/.deptrac.cache
-/.*.pid
 
 ###> lexik/jwt-authentication-bundle ###
 /config/jwt/*.pem
 ###< lexik/jwt-authentication-bundle ###
+.history
+.idea
+.vscode
