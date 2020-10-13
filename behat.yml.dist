@@ -1,0 +1,36 @@
+default:
+    suites:
+        default:
+            paths:
+                - features
+            contexts:
+                - Ergonode\Core\Test\Behat\Context\StoreRestResponseParamContext
+                - Ergonode\Core\Test\Behat\Context\UserContext
+                - Ergonode\Core\Test\Behat\Context\ResolveVarsContext
+                - Ergonode\Core\Test\Behat\Context\ApiAuthContext:
+                    JWTTokenManager: '@lexik_jwt_authentication.jwt_manager'
+                    request: '@Behatch\HttpCall\Request'
+                - Ergonode\Core\Test\Behat\Context\UploadFileContext
+                - behatch:context:rest
+                - behatch:context:json
+                - behatch:context:debug
+                - Behat\MinkExtension\Context\MinkContext
+                - Ergonode\Core\Test\Behat\Context\StorageContext:
+                - Ergonode\Core\Test\Behat\Context\AuthenticationContext:
+                    username: 'test@ergonode.com'
+                    password: 'abcd1234'
+
+
+    extensions:
+        FriendsOfBehat\SymfonyExtension: ~
+        Behatch\Extension: ~
+        Behat\MinkExtension:
+            base_url: '%env(APP_URL)%'
+            sessions:
+                default:
+                    symfony2: ~
+        Ergonode\Core\Test\Behat\Extension\EnvVarProcessorExtension: ~
+        Behat\Symfony2Extension:
+            kernel:
+                bootstrap: 'features/bootstrap/bootstrap.php'
+                class: 'App\Kernel'

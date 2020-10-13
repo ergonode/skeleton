@@ -43,7 +43,7 @@ framework:
             'Ergonode\Category\Domain\Command\UpdateCategoryCommand': core
             'Ergonode\Designer\Domain\Command\CreateTemplateCommand': core
             'Ergonode\Designer\Domain\Command\UpdateTemplateCommand': core
-#            'Ergonode\Mailer\Domain\Command\SendMailCommand': notification
+            'Ergonode\Mailer\Domain\Command\SendMailCommand': notification
             'Ergonode\Exporter\Domain\Command\Export\ProcessExportCommand': export
             'Ergonode\ExporterFile\Domain\Command\Export\StartFileExportCommand': export
             'Ergonode\ExporterFile\Domain\Command\Export\ProcessAttributeCommand': export
