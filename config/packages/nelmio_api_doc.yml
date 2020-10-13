@@ -11,7 +11,7 @@ nelmio_api_doc:
                 name: JWTAuthorization
                 in: header
         security:
-            - api_key: []
+            -   api_key: []
         definitions:
             point:
                 type: object
@@ -81,7 +81,7 @@ nelmio_api_doc:
                         type: string
                         required: true
                         description: User language
-                        example: EN
+                        example: en_GB
                     password:
                         type: string
                         required: true
@@ -115,7 +115,7 @@ nelmio_api_doc:
                         type: string
                         required: true
                         description: User language
-                        example: EN
+                        example: en_GB
                     password:
                         type: string
                         required: true
@@ -128,6 +128,16 @@ nelmio_api_doc:
                         type: string
                         required: true
                         example: 86800536-0f2a-4920-9291-f35fdcea3839
+                    languagePrivilegesCollection:
+                        type: array
+                        items:
+                            type: array
+                        required: false
+                        description: Language privileges collection
+                        example:
+                          {
+                              "en_GB": {"read": true, "edit":true}
+                          }
                     isActive:
                         type: boolean
                         required: true
@@ -174,13 +184,13 @@ nelmio_api_doc:
                     name:
                         $ref: "#/definitions/translation"
                         example:
-                            PL: Name PL
-                            EN: Name EN
+                            pl_PL: Name PL
+                            en_GB: Name EN
                     description:
                         $ref: "#/definitions/translation"
                         example:
-                            PL: Description PL
-                            EN: Description EN
+                            pl_PL: Description PL
+                            en_GB: Description EN
             transition_create:
                 type: object
                 properties:
@@ -253,8 +263,8 @@ nelmio_api_doc:
                         type: object
                         description: category name
                         example:
-                            DE: Name DE
-                            EN: Name EN
+                            de_DE: Name DE
+                            en_GB: Name EN
 
             tree:
                 type: object
@@ -263,8 +273,8 @@ nelmio_api_doc:
                         type: object
                         description: category name
                         example:
-                            DE: Name DE
-                            EN: Name EN
+                            de_DE: Name DE
+                            en_GB: Name EN
                     categories:
                         type: array
                         items:
@@ -277,7 +287,7 @@ nelmio_api_doc:
                         description: Category id
                         required: true
                         example: category id
-                    childrens:
+                    children:
                         type: array
                         items:
                             $ref: "#/definitions/tree_node"
@@ -289,12 +299,17 @@ nelmio_api_doc:
                         description: Category code (use only when create)
                         required: true
                         example: category_code_1
+                    type:
+                        type: string
+                        required: true
+                        description: category type
+                        example: CATEGORY
                     name:
                         type: object
                         description: category name
                         example:
-                            DE: Name DE
-                            EN: Name EN
+                            de_DE: Name DE
+                            en_GB: Name EN
             category_update:
                 type: object
                 properties:
@@ -302,8 +317,132 @@ nelmio_api_doc:
                         type: object
                         description: category name
                         example:
-                            DE: Name DE
-                            EN: Name EN
+                            de_DE: Name DE
+                            en_GB: Name EN
+            product_collection_create:
+                type: object
+                properties:
+                    code:
+                        type: string
+                        description: Product collection code
+                        required: true
+                        example: product_collection_code_1
+                    name:
+                        type: object
+                        description: Product Collection name
+                        example:
+                            de_DE: Name DE
+                            en_GB: Name EN
+                    description:
+                        type: object
+                        description: Product Collection description
+                        example:
+                            de_DE: Description DE
+                            en_GB: Description EN
+                    typeId:
+                        type: string
+                        description: Product Collection Type Id
+                        required: true
+                        example: 21eca257-78ed-54ed-936e-ff6823a87da7
+            product_collection_update:
+                type: object
+                properties:
+                    name:
+                        type: object
+                        description: Product Collection name
+                        example:
+                            de_DE: Name DE
+                            en_GB: Name EN
+                    description:
+                        type: object
+                        description: Product Collection description
+                        example:
+                            de_DE: Description DE
+                            en_GB: Description EN
+                    typeId:
+                        type: string
+                        description: Product Collection Type Id
+                        required: true
+                        example: ccd5c2b5-da15-4bd2-a476-bfa689560f22
+            element_create:
+                type: object
+                properties:
+                    productId:
+                        type: string
+                        description: Product Id
+                        required: true
+                        example: ccd5c2b5-da15-4bd2-a476-bfa689560f22
+                    visible:
+                        type: bool
+                        required: true
+                        description: Show if product is visible for other products from collection
+                        example: true
+            element_update:
+                type: object
+                properties:
+                    visible:
+                        type: bool
+                        required: true
+                        description: Show if product is visible for other products from collection
+                        example: true
+
+            element_create_by_segment_and_sku:
+                type: object
+                properties:
+                    segments:
+                        type: array
+                        items:
+                            type: string
+                        required: false
+                        description: List of segment Ids
+                        example:
+                          [ a4898f22-bcca-5842-bc78-b2401191cea8, 1bdcab91-5fc1-42c0-8a7f-4602ca9a2511]
+                    skus:
+                        type: array
+                        items:
+                            type: string
+                        required: false
+                        description: List of Skus
+                        example:
+                          [ SKU_1, SKU_2]
+
+
+            product_collection_type_create:
+                type: object
+                properties:
+                    code:
+                        type: string
+                        description: Product collection type code
+                        required: true
+                        example: product_collection_type_code_1
+                    name:
+                        type: object
+                        description: Product Collection type name
+                        example:
+                            de_DE: Name DE
+                            en_GB: Name EN
+            product_collection_type_update:
+                type: object
+                properties:
+                    name:
+                        type: object
+                        description: Product Collection type name
+                        example:
+                            de_DE: Name DE
+                            en_GB: Name EN
+            unit:
+                type: object
+                properties:
+                    name:
+                        type: string
+                        required: true
+                        description: Unit name
+                        example: Metre
+                    symbol:
+                        type: string
+                        required: true
+                        description: Unit symbol
+                        example: m
             product:
                 type: object
                 properties:
@@ -312,6 +451,11 @@ nelmio_api_doc:
                         required: true
                         description: product SKU
                         example: sku_123
+                    type:
+                        type: string
+                        required: true
+                        description: product type
+                        example: SIMPLE-PRODUCT
                     templateId:
                         type: string
                         required: true
@@ -331,6 +475,35 @@ nelmio_api_doc:
                             type: string
                         required: false
                         description: Lista id kategorii
+            product_child:
+                type: object
+                properties:
+                    child_id:
+                        type: string
+                        required: true
+                        description: Product id
+                        example: d1b9b64a-fef6-440c-9560-cf73daa4b4d6
+            product_binding_colection:
+                type: array
+                items:
+                    $ref: "#/definitions/product_binding"
+                    description: list of binded attribute ids
+            product_binding:
+                type: object
+                properties:
+                    bind_id:
+                        type: string
+                        required: true
+                        description: Multiselect attribute id
+                        example: d1b9b64a-fef6-440c-9560-cf73daa4b4d6
+            product_category:
+                type: object
+                properties:
+                    category:
+                        type: string
+                        required: true
+                        description: Category Id
+                        example: d1b9b64a-fef6-440c-9560-cf73daa4b4d6
             template:
                 type: object
                 properties:
@@ -339,6 +512,16 @@ nelmio_api_doc:
                         required: true
                         description: Template name
                         example: Name
+                    defaultLabel:
+                        type: string
+                        required: true
+                        description: Attribute Id of default Label
+                        example: d1b9b64a-fef6-440c-9560-cf73daa4b4d6
+                    defaultImage:
+                        type: string
+                        required: true
+                        description: Attribute Id of default Image
+                        example: d1b9b64a-fef6-440c-9560-cf73daa4b4d6
                     image:
                         type: string
                         required: false
@@ -350,12 +533,12 @@ nelmio_api_doc:
             translation:
                 type: object
                 properties:
-                    PL:
+                    pl_PL:
                         type: string
                         required: false
                         description: PL Translation
                         example: Translated phase PL
-                    EN:
+                    en_GB:
                         type: string
                         required: false
                         description: EN Translation
@@ -371,10 +554,10 @@ nelmio_api_doc:
                     value:
                         $ref: "#/definitions/translation"
                 example:
-                    key: key_1
-                    value:
-                        PL: Option PL 1
-                        EN: Option EN 1
+                    code: key_1
+                    label:
+                        pl_PL: Option PL 1
+                        en_GB: Option EN 1
             attribute_parameters:
                 type: object
                 properties:
@@ -402,11 +585,11 @@ nelmio_api_doc:
                     condition_set_id: 'd1b9b64a-fef6-440c-9560-cf73daa4b4d6'
                     code: 'code'
                     name:
-                        PL: 'Nazwa'
-                        EN: 'Name'
+                        pl_PL: 'Nazwa'
+                        en_GB: 'Name'
                     description:
-                        PL: 'Opis'
-                        EN: 'Description'
+                        pl_PL: 'Opis'
+                        en_GB: 'Description'
             languages_request:
                 type: object
                 properties:
@@ -416,7 +599,7 @@ nelmio_api_doc:
                             type: string
                         description: Collection of languages
                         example:
-                          [ PL, EN ]
+                          [ pl_PL, en_GB ]
             language_response:
                 type: object
                 properties:
@@ -429,7 +612,7 @@ nelmio_api_doc:
                         type: string
                         required: true
                         description: Language code
-                        example: EN
+                        example: en_GB
                     name:
                         type: string
                         required: true
@@ -440,6 +623,25 @@ nelmio_api_doc:
                         required: true
                         description: Show if language is enabled in the system
                         example: true
+            language_tree:
+                type: object
+                properties:
+                    languages:
+                        type: array
+                        items:
+                            $ref: "#/definitions/language_tree_node"
+            language_tree_node:
+                type: object
+                properties:
+                    language:
+                        type: string
+                        description: Language Code
+                        required: true
+                        example: en_GB
+                    children:
+                        type: array
+                        items:
+                            $ref: "#/definitions/language_tree_node"
             attribute_group:
                 type: object
                 properties:
@@ -454,8 +656,8 @@ nelmio_api_doc:
                 example:
                     code: 'attribute_group_code'
                     name:
-                        PL: 'Nazwa grupy PL'
-                        EN: 'Name of group EN'
+                        pl_PL: 'Nazwa grupy PL'
+                        en_GB: 'Name of group EN'
             attribute_group_update:
                 type: object
                 properties:
@@ -465,8 +667,18 @@ nelmio_api_doc:
                         description: attribute group name
                 example:
                     name:
-                        PL: 'Nazwa grupy PL'
-                        EN: 'Name of group EN'
+                        pl_PL: 'Nazwa grupy PL'
+                        en_GB: 'Name of group EN'
+            options:
+                type: object
+                properties:
+                    code:
+                        type: string
+                        required: true
+                        description: option code
+                        example: option_code_1
+                    label:
+                        $ref: "#/definitions/translation"
             attribute:
                 type: object
                 properties:
@@ -499,10 +711,6 @@ nelmio_api_doc:
                         example: true
                     parameters:
                         $ref: "#/definitions/attribute_parameters"
-                    options:
-                        type: array
-                        items:
-                            $ref: "#/definitions/option"
             configuration_field:
                 type: object
                 properties:
@@ -620,6 +828,14 @@ nelmio_api_doc:
                         required: true
                         description: comment text
                         example: example comment
+            channel:
+                type: 'object'
+                properties:
+                    type:
+                        type: string
+                        required: true
+                        description: name
+                        example: channel1
     areas:
         path_patterns:
             - ^/api(?!/doc$)

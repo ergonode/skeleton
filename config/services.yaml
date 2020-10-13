@@ -2,14 +2,15 @@ parameters:
     locale: 'pl'
     router.request_context.host: '%env(APP_HOST)%'
     router.request_context.scheme: '%env(APP_SCHEME)%'
+    es.snapshot.event: 10
 
 services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
         public: false       # Allows optimizing the container by removing unused services; this also means
-          # fetching services directly from the container via $container->get() won't work.
-        # The best practice is to be explicit about your dependencies anyway.
+                            # fetching services directly from the container via $container->get() won't work.
+                            # The best practice is to be explicit about your dependencies anyway.
     App\:
         resource: '../src/*'
         exclude: '../src/{Entity,Migrations,Tests,Adapter,Kernel.php}'
@@ -18,3 +19,7 @@ services:
         class: Mhujer\JmsSerializer\Uuid\UuidSerializerHandler
         tags:
             - { name: jms_serializer.subscribing_handler }
+
+    Ergonode\EventSourcing\Infrastructure\Snapshot\DbalAggregateSnapshot:
+        arguments:
+            $snapshotEvents: 1

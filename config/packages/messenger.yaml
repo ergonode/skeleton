@@ -22,20 +22,25 @@ framework:
             export: "%env(MESSENGER_TRANSPORT_EXPORT_DSN)%"
             core: "%env(MESSENGER_TRANSPORT_CORE_DSN)%"
             event: "%env(MESSENGER_TRANSPORT_DOMAIN_DSN)%"
+            segment: "%env(MESSENGER_TRANSPORT_SEGMENT_DSN)%"
         routing:
-            'Ergonode\Importer\Domain\Command\CreateFileImportCommand' : import
-            'Ergonode\Importer\Domain\Command\StartProcessImportCommand' : import
-            'Ergonode\Importer\Domain\Command\CreateImportLineCommand' : import
-            'Ergonode\Importer\Domain\Command\EndProcessImportCommand' : import
-            'Ergonode\Importer\Domain\Command\StopProcessImportCommand' : import
-            'Ergonode\Transformer\Domain\Command\CreateProcessorCommand' : import
-            'Ergonode\Transformer\Domain\Command\CreateTransformerCommand' : import
-            'Ergonode\Transformer\Domain\Command\EndProcessImportLineCommand' : import
-            'Ergonode\Transformer\Domain\Command\GenerateTransformerCommand' : import
-            'Ergonode\Transformer\Domain\Command\ProcessImportLineCommand' : import
-            'Ergonode\Transformer\Domain\Command\StartProcessImportLineCommand' : import
-            'Ergonode\Transformer\Domain\Command\StopProcessImportLineCommand' : import
-            'Ergonode\Attribute\Domain\Command\CreateAttributeCommand': core
-            'Ergonode\Attribute\Domain\Command\DeleteAttributeCommand': core
-            'Ergonode\Attribute\Domain\Command\UpdateAttributeCommand': core
-            'Ergonode\Attribute\Domain\Command\AddAttributeOptionCommand': core
+            'Ergonode\Importer\Domain\Command\Import\StartImportCommand' : import
+            'Ergonode\Importer\Domain\Command\Import\StopImportCommand' : import
+            'Ergonode\Importer\Domain\Command\Import\ProcessImportCommand' : import
+            'Ergonode\Importer\Domain\Command\Import\EndImportCommand' : import
+            'Ergonode\Segment\Domain\Command\CalculateProductCommand': segment
+            'Ergonode\Segment\Domain\Command\CalculateSegmentCommand': segment
+            'Ergonode\Segment\Domain\Command\CalculateProductInSegmentCommand': segment
+            'Ergonode\Category\Domain\Command\CreateCategoryCommand': core
+            'Ergonode\Category\Domain\Command\UpdateCategoryCommand': core
+            'Ergonode\Designer\Domain\Command\CreateTemplateCommand': core
+            'Ergonode\Designer\Domain\Command\UpdateTemplateCommand': core
+            'Ergonode\Exporter\Domain\Command\Export\ProcessExportCommand': export
+            'Ergonode\ExporterFile\Domain\Command\Export\StartFileExportCommand': export
+            'Ergonode\ExporterFile\Domain\Command\Export\ProcessAttributeCommand': export
+            'Ergonode\ExporterFile\Domain\Command\Export\ProcessCategoryCommand': export
+            'Ergonode\ExporterFile\Domain\Command\Export\ProcessMultimediaCommand': export
+            'Ergonode\ExporterFile\Domain\Command\Export\ProcessOptionCommand': export
+            'Ergonode\ExporterFile\Domain\Command\Export\ProcessProductCommand': export
+            'Ergonode\ExporterFile\Domain\Command\Export\ProcessTemplateCommand': export
+            'Ergonode\ExporterFile\Domain\Command\Export\EndFileExportCommand': export

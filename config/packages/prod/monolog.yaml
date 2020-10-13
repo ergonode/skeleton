@@ -5,13 +5,30 @@ monolog:
             type: fingers_crossed
             action_level: error
             handler: nested
+            buffer_size:  40
             excluded_404s:
                 # regex: exclude all 404 errors from the logs
                 - ^/
+        main_stderr:
+            type: fingers_crossed
+            action_level: error
+            handler: stderr
+            buffer_size:  40
+            excluded_404s:
+                # regex: exclude all 404 errors from the logs
+                - ^/
+        stderr:
+            type: stream
+            path: "php://stderr"
+            level: error
         nested:
             type: stream
             path: "%kernel.logs_dir%/%kernel.environment%.log"
             level: debug
+        error:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%-error.log"
+            level: error
         console:
             type:   console
             process_psr_3_messages: false
