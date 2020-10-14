@@ -18,8 +18,8 @@ parameters:
     'pl_PL': 'Opublikowany'
     'en_GB': 'Published'
   category_tree_name:
-    'pl_PL': 'Polish_name'
-    'en_GB': 'English_name'
+    'pl_PL': 'Domyślne drzewo kategori'
+    'en_GB': 'Default Category Tree'
   label_esa_status:
     'pl_PL': 'Status'
     'en_GB': 'Status'
