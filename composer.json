@@ -56,9 +56,6 @@
         "symfony/validator": "4.4.7",
         "symfony/yaml": "4.4.*"
     },
-    "require-dev": {
-        "symfony/web-server-bundle": "^4.4"
-    },
     "minimum-stability": "beta",
     "config": {
         "bin-dir": "bin",
