@@ -1,7 +1,7 @@
 {
     "name": "ergonode/skeleton",
     "type": "project",
-    "license": "OSL-3",
+    "license": "OSL-3.0",
     "description": "Ergonode skeleton project to create backend application",
     "require": {
         "php": "^7.4",
