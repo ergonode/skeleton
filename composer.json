@@ -53,7 +53,6 @@
         "symfony/monolog-bundle": "^3.5",
         "symfony/orm-pack": "*",
         "symfony/twig-bundle": "4.4.*",
-        "symfony/validator": "4.4.7",
         "symfony/yaml": "4.4.*"
     },
     "minimum-stability": "beta",
