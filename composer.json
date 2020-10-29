@@ -74,12 +74,6 @@
             "App\\Tests\\": "tests/"
         }
     },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://satis.abbc.pl"
-        }
-    ],
     "replace": {
         "paragonie/random_compat": "2.*",
         "symfony/polyfill-ctype": "*",
