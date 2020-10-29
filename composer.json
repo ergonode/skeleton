@@ -13,6 +13,7 @@
         "ext-json": "*",
         "ext-pdo": "*",
         "ext-zip": "*",
+        "doctrine/common": "^2.0.0",
         "ergonode/account": "^1.0.0",
         "ergonode/api": "^1.0.0",
         "ergonode/attribute": "^1.0.0",
@@ -31,8 +32,8 @@
         "ergonode/fixture": "^1.0.0",
         "ergonode/grid": "^1.0.0",
         "ergonode/importer": "^1.0.0",
-        "ergonode/migration": "^1.0.0",
         "ergonode/mailer": "^1.0.0",
+        "ergonode/migration": "^1.0.0",
         "ergonode/multimedia": "^1.0.0",
         "ergonode/notification": "^1.0.0",
         "ergonode/product": "^1.0.0",
@@ -73,6 +74,12 @@
             "App\\Tests\\": "tests/"
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://satis.abbc.pl"
+        }
+    ],
     "replace": {
         "paragonie/random_compat": "2.*",
         "symfony/polyfill-ctype": "*",
