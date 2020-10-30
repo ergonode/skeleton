@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 return [
     Doctrine\Bundle\DoctrineBundle\DoctrineBundle::class => ['all' => true],
     Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle::class => ['all' => true],
@@ -10,7 +12,7 @@ return [
     Ergonode\Category\ErgonodeCategoryBundle::class => ['all' => true],
     Ergonode\Channel\ErgonodeChannelBundle::class => ['all' => true],
     Ergonode\Comment\ErgonodeCommentBundle::class => ['all' => true],
-    Ergonode\Completeness\CompletenessBundle::class => ['all' => true],
+    Ergonode\Completeness\ErgonodeCompletenessBundle::class => ['all' => true],
     Ergonode\Condition\ErgonodeConditionBundle::class => ['all' => true],
     Ergonode\Core\ErgonodeCoreBundle::class => ['all' => true],
     Ergonode\Designer\ErgonodeDesignerBundle::class => ['all' => true],
@@ -22,7 +24,7 @@ return [
     Ergonode\Grid\ErgonodeGridBundle::class => ['all' => true],
     Ergonode\Importer\ErgonodeImporterBundle::class => ['all' => true],
     Ergonode\Mailer\ErgonodeMailerBundle::class => ['all' => true],
-    Ergonode\Migration\MigrationBundle::class => ['all' => true],
+    Ergonode\Migration\ErgonodeMigrationBundle::class => ['all' => true],
     Ergonode\Multimedia\ErgonodeMultimediaBundle::class => ['all' => true],
     Ergonode\Notification\ErgonodeNotificationBundle::class => ['all' => true],
     Ergonode\ProductCollection\ErgonodeProductCollectionBundle::class => ['all' => true],
@@ -33,6 +35,7 @@ return [
     Ergonode\Transformer\ErgonodeTransformerBundle::class => ['all' => true],
     Ergonode\Value\ErgonodeValueBundle::class => ['all' => true],
     Ergonode\Workflow\ErgonodeWorkflowBundle::class => ['all' => true],
+    Gesdinet\JWTRefreshTokenBundle\GesdinetJWTRefreshTokenBundle::class => ['all' => true],
     JMS\SerializerBundle\JMSSerializerBundle::class => ['all' => true],
     League\FlysystemBundle\FlysystemBundle::class => ['all' => true],
     Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle::class => ['all' => true],
