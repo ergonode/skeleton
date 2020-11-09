@@ -18,6 +18,7 @@
         "ergonode/api": "^1.0.0",
         "ergonode/attribute": "^1.0.0",
         "ergonode/authentication": "^1.0.0",
+        "ergonode/batch-action": "^1.0.0",
         "ergonode/category": "^1.0.0",
         "ergonode/channel": "^1.0.0",
         "ergonode/comment": "^1.0.0",
@@ -57,6 +58,7 @@
         "symfony/yaml": "4.4.*"
     },
     "minimum-stability": "beta",
+    "prefer-stable": true,
     "config": {
         "bin-dir": "bin",
         "preferred-install": {
