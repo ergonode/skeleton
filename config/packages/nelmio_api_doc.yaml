@@ -2,7 +2,6 @@ nelmio_api_doc:
   documentation:
     info:
       title: Ergonode
-      version: 1.0.0-beta.3
     securityDefinitions:
       api_key:
         type: apiKey
