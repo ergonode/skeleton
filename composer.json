@@ -1,6 +1,7 @@
 {
     "name": "ergonode/skeleton",
     "type": "project",
+    "homepage": "https://ergonode.com",
     "license": "OSL-3.0",
     "description": "Ergonode skeleton project to create backend application",
     "require": {
@@ -42,7 +43,6 @@
         "ergonode/reader": "^1.0.0",
         "ergonode/segment": "^1.0.0",
         "ergonode/shared-kernel": "^1.0.0",
-        "ergonode/transformer": "^1.0.0",
         "ergonode/value": "^1.0.0",
         "ergonode/workflow": "^1.0.0",
         "symfony/asset": "4.4.*",
