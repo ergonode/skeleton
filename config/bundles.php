@@ -33,7 +33,6 @@ return [
     Ergonode\Reader\ErgonodeReaderBundle::class => ['all' => true],
     Ergonode\Segment\ErgonodeSegmentBundle::class => ['all' => true],
     Ergonode\SharedKernel\ErgonodeSharedKernelBundle::class => ['all' => true],
-    Ergonode\Transformer\ErgonodeTransformerBundle::class => ['all' => true],
     Ergonode\Value\ErgonodeValueBundle::class => ['all' => true],
     Ergonode\Workflow\ErgonodeWorkflowBundle::class => ['all' => true],
     Gesdinet\JWTRefreshTokenBundle\GesdinetJWTRefreshTokenBundle::class => ['all' => true],
