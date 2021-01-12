@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 return [
     Doctrine\Bundle\DoctrineBundle\DoctrineBundle::class => ['all' => true],
-    Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle::class => ['all' => true],
     Ergonode\Account\ErgonodeAccountBundle::class => ['all' => true],
     Ergonode\Api\ErgonodeApiBundle::class => ['all' => true],
     Ergonode\Attribute\ErgonodeAttributeBundle::class => ['all' => true],
@@ -17,12 +16,12 @@ return [
     Ergonode\Condition\ErgonodeConditionBundle::class => ['all' => true],
     Ergonode\Core\ErgonodeCoreBundle::class => ['all' => true],
     Ergonode\Designer\ErgonodeDesignerBundle::class => ['all' => true],
-    Ergonode\Editor\ErgonodeEditorBundle::class => ['all' => true],
     Ergonode\EventSourcing\ErgonodeEventSourcingBundle::class => ['all' => true],
     Ergonode\ExporterFile\ErgonodeExporterFileBundle::class => ['all' => true],
     Ergonode\Exporter\ErgonodeExporterBundle::class => ['all' => true],
     Ergonode\Fixture\ErgonodeFixtureBundle::class => ['dev' => true, 'test' => true],
     Ergonode\Grid\ErgonodeGridBundle::class => ['all' => true],
+    Ergonode\ImporterErgonode1\ErgonodeImporterErgonode1Bundle::class => ['all' => true],
     Ergonode\Importer\ErgonodeImporterBundle::class => ['all' => true],
     Ergonode\Mailer\ErgonodeMailerBundle::class => ['all' => true],
     Ergonode\Migration\ErgonodeMigrationBundle::class => ['all' => true],
