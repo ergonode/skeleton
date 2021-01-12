@@ -15,6 +15,7 @@
         "ext-pdo": "*",
         "ext-zip": "*",
         "doctrine/common": "^2.0.0",
+        "doctrine/doctrine-bundle": "^2.0",
         "ergonode/account": "^1.0.0",
         "ergonode/api": "^1.0.0",
         "ergonode/attribute": "^1.0.0",
@@ -53,7 +54,6 @@
         "symfony/framework-bundle": "4.4.*",
         "symfony/messenger": "4.4.*",
         "symfony/monolog-bundle": "^3.5",
-        "symfony/orm-pack": "*",
         "symfony/twig-bundle": "4.4.*",
         "symfony/yaml": "4.4.*"
     },
