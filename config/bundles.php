@@ -18,7 +18,6 @@ return [
     Ergonode\Designer\ErgonodeDesignerBundle::class => ['all' => true],
     Ergonode\EventSourcing\ErgonodeEventSourcingBundle::class => ['all' => true],
     Ergonode\ExporterFile\ErgonodeExporterFileBundle::class => ['all' => true],
-    Ergonode\Exporter\ErgonodeExporterBundle::class => ['all' => true],
     Ergonode\Fixture\ErgonodeFixtureBundle::class => ['dev' => true, 'test' => true],
     Ergonode\Grid\ErgonodeGridBundle::class => ['all' => true],
     Ergonode\ImporterErgonode1\ErgonodeImporterErgonode1Bundle::class => ['all' => true],
