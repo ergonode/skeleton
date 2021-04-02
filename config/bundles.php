@@ -1,7 +1,8 @@
 <?php
+
 /**
- * Copyright © Bold Brand Commerce Sp. z o.o. All rights reserved.
- * See license.txt for license details.
+ * Copyright © Ergonode Sp. z o.o. All rights reserved.
+ * See LICENSE.txt for license details.
  */
 
 declare(strict_types=1);
@@ -38,7 +39,6 @@ return [
     Ergonode\Value\ErgonodeValueBundle::class => ['all' => true],
     Ergonode\Workflow\ErgonodeWorkflowBundle::class => ['all' => true],
     Gesdinet\JWTRefreshTokenBundle\GesdinetJWTRefreshTokenBundle::class => ['all' => true],
-    JMS\SerializerBundle\JMSSerializerBundle::class => ['all' => true],
     League\FlysystemBundle\FlysystemBundle::class => ['all' => true],
     Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle::class => ['all' => true],
     Limenius\LiformBundle\LimeniusLiformBundle::class => ['all' => true],
