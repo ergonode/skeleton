@@ -1,0 +1,4 @@
+ergonode_event_sourcing:
+  # Enable `aggregate_root_cache` accelerates application performance
+  # It should be shared cache across entire application stack
+  aggregate_root_cache: null
