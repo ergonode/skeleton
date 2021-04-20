@@ -55,7 +55,7 @@
         "symfony/twig-bundle": "4.4.*",
         "symfony/yaml": "4.4.*"
     },
-    "minimum-stability": "RC",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
         "bin-dir": "bin",
